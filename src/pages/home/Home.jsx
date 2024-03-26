@@ -30,6 +30,7 @@ import img23 from '../../assets/imgs/img23.png';
 import img24 from '../../assets/imgs/img24.png';
 import prev from '../../assets/imgs/prev.png';
 import next from '../../assets/imgs/next.png';
+import solutionsImg from '../../assets/imgs/solutionsImg.png';
 import tickIcon from '../../assets/imgs/tickIcon.png'
 import { CardLeft } from './CardLeft';
 import Card1 from './Card1';
@@ -44,24 +45,33 @@ import { Padding } from '@mui/icons-material';
 
 export default function Home() {
     let [hideModal, setHideModal] = useState(true)
-    const bannerFacilities = ['Messaging', 'Merchandising', 'Market Segmentation', 'Personalization', 'Wallet Booking & Confirmation', 'QR Code Generator', 'Chatbot AI', 'Loyalty', 'GeoFencing', 'Customer Recognition', 'Vouchers & Gift Cards', 'Inspirations', 'Asset Tracking', 'RFID Platforms']
-    const pricingData = [{
-        heading: "SMB-Essentials \n Per Location",
+    const bannerFacilities = ['Message-360', '1-1 Message', 'Message-Segmentation', 'Blas-M','Booking Engine-Script', 'Guest Return (OTA Con)', 'Guest Recognition', 'Special Occasions', 'Voucher-Loyality-Gift cards0', 'Market-Segmentation', 'Geofencing-Virtual Fence','Geo-Conquesting','Chatbot AI', 'RFID-Marketing', 'QR Platform' ]
+    const pricingData = [
+        {
+        heading: "Essentials",
+        explanation:"For startups and growing companies",
+        price: "$0 user/month",
         btnLabel: "Open an account - for free",
-        features: ['Messaging', 'Market Segmentation', 'Personalization', 'Reputation Management', 'Geofencing', 'Chatbot AI', 'QR Platform (Limited)']
+        features: ['Global corporate cards', 'Business account and bill pay', '$6M FDIC coverage adn 4.90% yield', 'Integrated expense management', 'Brex AI expense assistant', 'Real-time spend reporting', 'Accounting integrations', '24/7 support'],
     },
     {
-        heading: "SME - Premium \n Per Location",
+        heading: "Premium",
+        explanation:"For mid-sized companies looking to scale",
+        price: "$12 user/month",
         btnLabel: "Contact sales",
-        features: ['Booking/Purchase Confirmation', 'Blast-M', 'Message -360', 'Loyality Integration', 'Customer Recognition', 'Voucher & Gift Cards'],
-        specialNote: "Everything in Essential plus:",
+        features: ['Custom expense policies and approvals', 'In-app travel booking adn management', 'Live Budgets with real-time tracking', 'Custom procurement workflows', 'Custom, automated HRIS and advanced accounting integration', 'Dedicated support for admins'],
+        specialNote:'Everything in Essentials plus:',
     },
     {
-        heading: "Enterprise \n Per Location",
+        heading: "Enterprise",
+        explanation:"For global enterprises with custom needs",
+        price: "Custom Pricing",
         btnLabel: "Contact sales",
-        features: ['All Platforms', 'Inspirtations', 'Asset Tracking', 'RFID', 'QR Platform (Unlimited)'],
-        specialNote: 'Everything in Premium plus:',
-    }
+        features: ['Local cards and billing in 50+ countries', 'Locally funded payments in 40+ countries', 'Unlimited policy customization', 'Advanced roles and permissions', 'Custom companies and audit reports', 'Top-tier onboarding and support'],
+        specialNote:'Everything in Premium plus:',
+    },
+
+    
     ]
     const sliderData = [
         {
@@ -203,17 +213,18 @@ export default function Home() {
                 <section className='home-sec4-box padding'>
                     <div className="global-heading1">Solutions</div>
                     <div className='margin-home'>
-                        <Grid container spacing={5}>
+                        <img src={solutionsImg} alt="solutionsImgs" width='100%' />
+                        {/* <Grid container spacing={5}>
                             <Grid item md={4} sm={6} xs={12}>
-                                <Card1 img={img6} heading="SMB - Starting with 1-10 locations" />
+                                <Card1 img={img6} heading="SMB-Starting with 1-10 locations" />
                             </Grid>
                             <Grid item md={4} sm={6} xs={12}>
-                                <Card1 img={img7} heading="SMB - Starting with 1-10 locations" />
+                                <Card1 img={img7} heading="SME-Multi-Loc 11-30 locations" />
                             </Grid>
                             <Grid item md={4} sm={6} xs={12}>
-                                <Card1 img={img8} heading="SMB - Starting with 1-10 locations" />
+                                <Card1 img={img8} heading="Enterprise-31+ Locations" />
                             </Grid>
-                        </Grid>
+                        </Grid> */}
                     </div>
                 </section>
                 {/* section 5  */}
@@ -269,7 +280,7 @@ export default function Home() {
                                     “iVeeW has been a major gain for us in efficiency for T&E. It’s easy for employees to understand where and how to spend.”
                                 </div>
                                 <div className="home-sec5-author-name">— Mike Kim, Vice President of Finance, DoorDash</div>
-                                <div className="home-card-btnTxt">Click Here <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
+                                <div className="home-card-btnTxt">Read the case study <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
                             </Grid>
                         </Grid>
                     </div>
@@ -279,8 +290,8 @@ export default function Home() {
                     <div className="padding">
                         <Grid container>
                             <Grid item sm={5} xs={12}>
-                                <div className="home-sec6-heading">The AI Powered tools  to connect customers  and guests</div>
-                                <div className="home-sec6-content">Learn how our spend platform can increase the strategic impact of  your finance team and future-proof your company.</div>
+                                <div className="home-sec6-heading">The AI Powered tools  to connect customers  and <br/> guests</div>
+                                <div className="home-sec6-content">Learn how our spend platform can increase teh strategic impact of your finance team and future-proof your company.</div>
                                 <Btn label='Get Started' />
                             </Grid>
                         </Grid>
@@ -301,6 +312,8 @@ export default function Home() {
                                                 features={item.features}
                                                 btnLabel={item.btnLabel}
                                                 note={item?.specialNote}
+                                                price={item.price}
+                                                explanation={item.explanation}
                                             />
                                         </Grid>
                                     ))
@@ -309,7 +322,8 @@ export default function Home() {
                         </div>
                         <div className="home-sec7-bgBox">
                             <div className="home-sec7-heading">Looking for more global features?</div>
-                            <div className="home-sec7-content">Check out our enterprise solution — it has everything you need to manage multi-entity travel, expenses, and procurement in real time, on one platform, around the world.</div>
+                            <div className="home-sec7-content">Check out our enterprise solution — it has everything you need to manage multi-entity travel, expenses, and procurement <br/>
+                             in real time, on one platform, around the world.</div>
                             <Btn label="Explore our global enterprise solution" className='home-sec7-btn' />
                         </div>
                     </div>

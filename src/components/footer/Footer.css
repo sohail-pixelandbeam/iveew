@@ -5,19 +5,20 @@
 }
 
 .f-logo {
-    width: 130px;
+    width: 200px;
     cursor: pointer;
+    margin-top: -50px;
 }
 
 .f-linkBold {
     font-family: Poppins-Bold;
     font-size: 19px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     cursor: pointer;
 }
 
 .f-link {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     cursor: pointer;
     color: #BCBDBD;
 }
@@ -65,4 +66,10 @@
 .f-stores-imgs img:hover {
     opacity: 0.9;
     transition: 0.5s ease;
+}
+
+@media screen and (max-width:799px) {
+    .f-logo{
+        margin-top: 0px;
+    }
 }

@@ -3,11 +3,14 @@ import Btn from '../../components/btn/Btn'
 import CheckIcon from '@mui/icons-material/Check';
 
 
-export default function PricingCard({ heading, btnLabel, features, note }) {
+export default function PricingCard({ heading, btnLabel, features, note,price, explanation  }) {
     return (
         <div className='pricingCard-home'>
             <div className="pricingCard-heading" style={{ whiteSpace: 'pre-line' }} >{heading}</div>
+            <div className="pricingCard-explanation">{explanation}</div>
+            <div className="pricingCard-price">{price}</div>
             <Btn style={{ width: '100%', padding: '12px 12px', maxWidth: '100%', margin: '25px auto' }} label={btnLabel} />
+            
             {note ?? <div className="pricingCard-note">{note}</div>}
             <div className="priceCard-features">
                 {features && features.length > 0 &&

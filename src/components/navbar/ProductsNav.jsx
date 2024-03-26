@@ -73,13 +73,14 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             active: active6,
             label: 'Guest Return (OTA Con)'
         },
+        
+    ]
+    const data2 = [
         {
             icon: icon7,
             active: active7,
             label: 'Guest Recognition'
         },
-    ]
-    const data2 = [
         {
             icon: icon8,
             active: active8,
@@ -106,13 +107,14 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             active: active12,
             label: 'Geo-Conquesting'
         },
+       
+    ]
+    const data3 = [
         {
             icon: icon13,
             active: active13,
             label: 'Chatbot AI',
         },
-    ]
-    const data3 = [
         {
             icon: icon14,
             active: active14,
