@@ -3,6 +3,7 @@ import './Naved.css'
 import img6 from '../../assets/imgs/img6.png'
 import img7 from '../../assets/imgs/img7.png'
 import img8 from '../../assets/imgs/img8.png'
+import hoverNavBottom from '../../assets/imgs/hoverNavBottom.png'
 
 import { Grid, Modal } from '@mui/material'
 
@@ -21,7 +22,7 @@ export default function SolutionsNav({ showNote, setActiveLink }) {
                         outline: 'none'
                     }}
                 >
-                  <div className='productsNav' onClick={() => setShow(false)} 
+                  <div className='productsNav' 
                     style={{ 
                         top: showNote ? '100px' : '65px',
                         maxHeight: showNote ? '82vh':'88vh',
@@ -56,7 +57,8 @@ export default function SolutionsNav({ showNote, setActiveLink }) {
 
                                 </div>
                                 {/* bottom bar  */}
-                                <div className="productsNav-bottom">Control all your spend before it happens, all in one place. <span> Get Started</span></div>
+                                {/* <div className="productsNav-bottom">Control all your spend before it happens, all in one place. <span> Get Started</span></div> */}
+                                <img  src={hoverNavBottom} alt="navBottom" className='productsNav-bottom-img'/>
                             </div>
                         </div>
                     </div>

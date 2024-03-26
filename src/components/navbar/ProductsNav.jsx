@@ -36,6 +36,7 @@ import active15 from '../../assets/imgs/active15.png'
 import active16 from '../../assets/imgs/active16.png'
 import active17 from '../../assets/imgs/active17.png'
 import active18 from '../../assets/imgs/active18.png'
+import hoverNavBottom from '../../assets/imgs/hoverNavBottom.png'
 import { Grid, Modal } from '@mui/material'
 
 export default function ProductsNav({ showNote, setActiveLink }) {
@@ -45,92 +46,92 @@ export default function ProductsNav({ showNote, setActiveLink }) {
         {
             icon: icon1,
             active: active1,
-            label: 'Geo Fence'
+            label: 'Message-360'
         },
         {
             icon: icon2,
             active: active2,
-            label: 'Personalization'
+            label: '1-1 Message'
         },
         {
             icon: icon3,
             active: active3,
-            label: 'Reputation Management'
+            label: 'Message - Segmentaion'
         },
         {
             icon: icon4,
             active: active4,
-            label: 'Message-360'
+            label: 'Blast-M'
         },
         {
             icon: icon5,
             active: active5,
-            label: 'Message - Segmentation'
+            label: 'Booking Engine-Script'
         },
         {
             icon: icon6,
             active: active6,
-            label: 'Bhast-M'
+            label: 'Guest Return (OTA Con)'
+        },
+        {
+            icon: icon7,
+            active: active7,
+            label: 'Guest Recognition'
         },
     ]
     const data2 = [
         {
-            icon: icon7,
-            active: active7,
-            label: 'Chatbot AI'
-        },
-        {
             icon: icon8,
             active: active8,
-            label: 'Booking Engine-Script'
+            label: 'Special Occasions'
         },
 
         {
             icon: icon9,
             active: active9,
-            label: 'Customer Recognition'
+            label: 'Voucher-Loyalty-Gift cards'
         },
         {
             icon: icon10,
             active: active10,
-            label: 'Loyality Integration'
+            label: 'Market-Segmentation'
         },
         {
             icon: icon11,
             active: active11,
-            label: 'Voucher & Gift Cards'
+            label: 'Geofencing-Virtual Fence'
         },
         {
             icon: icon12,
             active: active12,
-            label: 'Event Messaging'
+            label: 'Geo-Conquesting'
+        },
+        {
+            icon: icon13,
+            active: active13,
+            label: 'Chatbot AI',
         },
     ]
     const data3 = [
         {
-            icon: icon13,
-            active: active13,
-            label: 'Messaging',
-        },
-        {
             icon: icon14,
             active: active14,
-            label: 'Confirmation & Vouchers',
+            label: 'Messaging',
         },
         {
             icon: icon15,
             active: active15,
-            label: 'Merchandising',
+            label: 'Confirmations & Vouchers',
         },
         {
             icon: icon16,
             active: active16,
-            label: 'Business - Wait Times',
+            label: 'Merchandising',
         },
         {
             icon: icon17,
             active: active17,
-            label: 'RFID - Making',
+            label: 'RFID - Marketing',
         },
         {
             icon: icon18,
@@ -150,7 +151,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
                         outline: 'none'
                     }}
                 >
-                    <div className='productsNav' onClick={() => setShow(false)} 
+                    <div className='productsNav' 
                     style={{ 
                         top: showNote ? '100px' : '65px',
                         maxHeight: showNote ? '82vh':'88vh',
@@ -213,7 +214,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
 
                                 </div>
                                 {/* bottom bar  */}
-                                <div className="productsNav-bottom">Control all your spend before it happens, all in one place. <span> Get Started</span></div>
+                                <img  src={hoverNavBottom} alt="navBottom" className='productsNav-bottom-img'/>
                             </div>
                         </div>
                     </div>

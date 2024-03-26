@@ -15,7 +15,7 @@ export const CardLeft = ({ img, heading, content }) => {
                         <div className="home-card-data">
                             <div className="home-card-heading">{heading}</div>
                             <div className="home-card-content">{content}</div>
-                            <div className="home-card-btnTxt">Click Here <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
+                            <div className="home-card-btnTxt">Explore iVeeW cards <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
                         </div>
                     </Grid>
                 </Grid >
@@ -26,7 +26,7 @@ export const CardLeft = ({ img, heading, content }) => {
                         <div className="home-card-data">
                             <div className="home-card-heading">{heading}</div>
                             <div className="home-card-content">{content}</div>
-                            <div className="home-card-btnTxt">Click Here <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
+                            <div className="home-card-btnTxt">Explore iVeeW cards <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
                         </div>
                     </Grid>
                     <Grid item sm={6} xs={12}>

@@ -13,9 +13,16 @@
 }
 
 .home-banner-heading {
-    font-family: Poppins-Bold;
+    font-family: Poppins-ExtraBold;
     font-size: 53px;
     margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.home-banner-right {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .home-banner-right div {
@@ -45,6 +52,33 @@
 
 .home-sec-2-img {
     width: 100%;
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+
+/* section 2 watch  */
+.home-sec2-watch-box{
+    background-color: black;
+    min-height: 300px;
+}
+
+.home-watch-heading{
+    color: white;
+    font-size: Poppins-SemiBold;
+    font-size: 28px;
+    margin-bottom: 5%;
+}
+
+.home-watch-content{
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
+    font-family: Poppins-Regular;
+    margin-right: 5%;
+}
+
+.home-watch-img{
+    cursor: pointer;
 }
 
 /* section 3  */

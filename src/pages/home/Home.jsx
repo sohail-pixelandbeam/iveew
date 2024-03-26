@@ -4,8 +4,10 @@ import NavBar from '../../components/navbar/Navbar';
 import { Grid } from '@mui/material';
 import Btn from '../../components/btn/Btn';
 import CheckIcon from '@mui/icons-material/Check';
+import imgAffliation from '../../assets/imgs/imgAffliation.png'
 import companies from '../../assets/imgs/companies.png';
 import companies1 from '../../assets/imgs/companies1.png';
+import imgWatch from '../../assets/imgs/imgWatch.png'
 import img1 from '../../assets/imgs/img1.png';
 import img2 from '../../assets/imgs/img2.png';
 import img3 from '../../assets/imgs/img3.png';
@@ -28,6 +30,7 @@ import img23 from '../../assets/imgs/img23.png';
 import img24 from '../../assets/imgs/img24.png';
 import prev from '../../assets/imgs/prev.png';
 import next from '../../assets/imgs/next.png';
+import tickIcon from '../../assets/imgs/tickIcon.png'
 import { CardLeft } from './CardLeft';
 import Card1 from './Card1';
 import { CardRight } from './CardRight';
@@ -41,7 +44,7 @@ import { Padding } from '@mui/icons-material';
 
 export default function Home() {
     let [hideModal, setHideModal] = useState(true)
-    const bannerFacilities = ['Messaging', 'Merchandising', 'Market Segmentation', 'Personalization', 'Wallet Booking & Communication', 'QR Code Generator', 'Chatbot AI', 'Loyalty', 'GeoFencing', 'Customer Recognition', 'Vouchers & Gift Cards', 'Inspirations', 'Asset Tracking', 'RFID Platforms']
+    const bannerFacilities = ['Messaging', 'Merchandising', 'Market Segmentation', 'Personalization', 'Wallet Booking & Confirmation', 'QR Code Generator', 'Chatbot AI', 'Loyalty', 'GeoFencing', 'Customer Recognition', 'Vouchers & Gift Cards', 'Inspirations', 'Asset Tracking', 'RFID Platforms']
     const pricingData = [{
         heading: "SMB-Essentials \n Per Location",
         btnLabel: "Open an account - for free",
@@ -127,16 +130,18 @@ export default function Home() {
                     <Grid container spacing={5}>
                         <Grid item sm={8} >
                             <div className="home-banner-heading">
-                                The AI Powered tools <br />
-                                to connect customers <br />
-                                and guests.
+                                The AI Powered Tools <br />
+                            To Connect Customers <br />
+                            And Guests
                             </div>
                             <Btn label='Get Started' />
                         </Grid>
                         <Grid item sm={4} >
                             <div className="home-banner-right">
                                 {bannerFacilities.map(item => (
-                                    <div key={item}><CheckIcon fontSize='small' /> {item}</div>
+                                    <div key={item}>
+                                    <img src={tickIcon} alt="tickIcon" width='20px' />
+                                     {item}</div>
                                 ))}
                             </div>
                         </Grid>
@@ -144,17 +149,35 @@ export default function Home() {
                 </section>
                 {/* section 2  */}
                 <section className='home-sec2-box padding'>
-                    <div className="global-heading1">Empower all to spend <br />confidently.</div>
-                    <div className="home-sec2-content global-text1">As a finance leader, you love control. But most company spend happens outside your team. So how do you empower everyone — everywhere — to spend wisely? Top companies are doing just that with iVeeW.
-                    </div>
+                    <div className="global-heading1">Empower customers or guests to receive   <br />personalized offers that relate to them the most</div>
+                   
                     <div className='home-sec2-imgs' >
-                        <img className='home-sec-2-img' src={companies} alt="companies" />
-                        <img className='home-sec-2-img' src={companies1} alt="companies" />
+                        <img className='home-sec-2-img' src={imgAffliation} alt="companies" />
                     </div>
                 </section>
+                {/* section 2 watch */}
+                <div className="home-sec2-watch-box">
+                    <div className="padding">
+                        <Grid container spacing={5}>
+                            <Grid item sm={7} xs={12}>
+                                <div className="home-watch-heading">Guest Recognition</div>
+                                <div className="home-watch-content">
+                                Our patented guest recognition application allows hotels and businesses to recognize guests and customers when approaching the hotel or entering a store.
+                                <br/><br />
+                                  Geofencing and beacons allow hotels and businesses to see guests go through virtual geofence.
+                                <br /><br />
+                                 Greeting by their name, recognizing them in the lobby, front desk, restaurant or spa by using Beacons and Ultra WideBands. 
+                                </div>
+                            </Grid>
+                            <Grid item sm={4} xs={12}>
+                                <img src={imgWatch} alt="imgWatch" width='100%' className='home-watch-img' />
+                            </Grid>
+                        </Grid>
+                    </div>
+                </div>
                 {/* section 3  */}
                 <section className='home-sec3-box padding'>
-                    <div className="global-heading1">Consolidate all spending onto <br /> one platform.</div>
+                    <div className="global-heading1">All your solutions. One <br /> Platform</div>
                     <div className="global-text1 home-sec2-content">Everything you need to control spend before it happens and empower teams confidently.</div>
                     <div className="">
                         <Grid container spacing={3}>
@@ -178,7 +201,7 @@ export default function Home() {
                 </section>
                 {/* section 4  */}
                 <section className='home-sec4-box padding'>
-                    <div className="global-heading1">Spend smarter at every stage <br /> of growth.</div>
+                    <div className="global-heading1">Solutions</div>
                     <div className='margin-home'>
                         <Grid container spacing={5}>
                             <Grid item md={4} sm={6} xs={12}>

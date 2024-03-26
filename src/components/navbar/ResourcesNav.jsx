@@ -6,7 +6,9 @@ import resource3 from '../../assets/imgs/resource3.png'
 import resource4 from '../../assets/imgs/resource4.png'
 import resource5 from '../../assets/imgs/resource5.png'
 import resource6 from '../../assets/imgs/resource6.png'
+import hoverNavBottom from '../../assets/imgs/hoverNavBottom.png'
 import EastIcon from '@mui/icons-material/East';
+
 
 
 
@@ -27,7 +29,7 @@ export default function ResourcesNav({ showNote, setActiveLink }) {
                         outline: 'none'
                     }}
                 >
-                     <div className='productsNav' onClick={() => setShow(false)} 
+                     <div className='productsNav' 
                     style={{ 
                         top: showNote ? '100px' : '65px',
                         maxHeight: showNote ? '82vh':'88vh',
@@ -57,7 +59,7 @@ export default function ResourcesNav({ showNote, setActiveLink }) {
                                         <Grid item sm={3} xs={12}>
                                             <div className="naved-solution-card">
                                                 <img src={resource3} alt="img6" width='100%' />
-                                                <div className="naved-resource-text">Beacons, wifi, mesh 5.0</div>
+                                                <div className="naved-resource-text">Beacons, wifi, mesh 5.0 <br /><div style={{color:'white'}}>.</div></div>
                                                 <div className="home-card-btnTxt ml-20">Click Here <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
                                             </div>
                                         </Grid>
@@ -84,7 +86,8 @@ export default function ResourcesNav({ showNote, setActiveLink }) {
 
                                 </div>
                                 {/* bottom bar  */}
-                                <div className="productsNav-bottom">Control all your spend before it happens, all in one place. <span> Get Started</span></div>
+                                {/* <div className="productsNav-bottom">Control all your spend before it happens, all in one place. <span> Get Started</span></div> */}
+                                <img  src={hoverNavBottom} alt="navBottom" className='productsNav-bottom-img'/>
                             </div>
                         </div>
                     </div>
