@@ -27,7 +27,11 @@ export default function ResourcesNav({ showNote, setActiveLink }) {
                         outline: 'none'
                     }}
                 >
-                    <div className='productsNav' onClick={() => setShow(false)} style={{ top: showNote ? '100px' : '65px' }} >
+                     <div className='productsNav' onClick={() => setShow(false)} 
+                    style={{ 
+                        top: showNote ? '100px' : '65px',
+                        maxHeight: showNote ? '82vh':'88vh',
+                    }} >
                         <div className='navedContent'  >
                             <div className="productsNav-inner">
                                 <div className="naved-innerBox">
