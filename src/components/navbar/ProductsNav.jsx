@@ -38,40 +38,48 @@ import active17 from '../../assets/imgs/active17.png'
 import active18 from '../../assets/imgs/active18.png'
 import hoverNavBottom from '../../assets/imgs/hoverNavBottom.png'
 import { Grid, Modal } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 export default function ProductsNav({ showNote, setActiveLink }) {
     let [show, setShow] = useState(true)
     let [hovered, setHovered] = useState('');
+    const navigate = useNavigate();
     const data1 = [
         {
             icon: icon1,
             active: active1,
-            label: 'Message-360'
+            label: 'Message-360',
+            to:'/'
         },
         {
             icon: icon2,
             active: active2,
-            label: '1-1 Message'
+            label: '1-1 Message',
+            to:'/'
         },
         {
             icon: icon3,
             active: active3,
-            label: 'Message - Segmentaion'
+            label: 'Message - Segmentaion',
+            to:'/'
         },
         {
             icon: icon4,
             active: active4,
-            label: 'Blast-M'
+            label: 'Blast-M',
+            to:'/'
         },
         {
             icon: icon5,
             active: active5,
-            label: 'Booking Engine-Script'
+            label: 'Booking Engine-Script',
+            to:'/'
         },
         {
             icon: icon6,
             active: active6,
-            label: 'Guest Return (OTA Con)'
+            label: 'Guest Return (OTA Con)',
+            to:'/'
         },
         
     ]
@@ -79,33 +87,39 @@ export default function ProductsNav({ showNote, setActiveLink }) {
         {
             icon: icon7,
             active: active7,
-            label: 'Guest Recognition'
+            label: 'Guest Recognition',
+            to:'/'
         },
         {
             icon: icon8,
             active: active8,
-            label: 'Special Occasions'
+            label: 'Special Occasions',
+            to:'/'
         },
 
         {
             icon: icon9,
             active: active9,
-            label: 'Voucher-Loyalty-Gift cards'
+            label: 'Voucher-Loyalty-Gift cards',
+            to:'/'
         },
         {
             icon: icon10,
             active: active10,
-            label: 'Market-Segmentation'
+            label: 'Market-Segmentation',
+            to:'/'
         },
         {
             icon: icon11,
             active: active11,
-            label: 'Geofencing-Virtual Fence'
+            label: 'Geofencing-Virtual Fence',
+            to:'/GeoFencing'
         },
         {
             icon: icon12,
             active: active12,
-            label: 'Geo-Conquesting'
+            label: 'Geo-Conquesting',
+            to:'/'
         },
        
     ]
@@ -114,31 +128,37 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon13,
             active: active13,
             label: 'Chatbot AI',
+            to:'/'
         },
         {
             icon: icon14,
             active: active14,
             label: 'Messaging',
+            to:'/'
         },
         {
             icon: icon15,
             active: active15,
             label: 'Confirmations & Vouchers',
+            to:'/'
         },
         {
             icon: icon16,
             active: active16,
             label: 'Merchandising',
+            to:'/'
         },
         {
             icon: icon17,
             active: active17,
             label: 'RFID - Marketing',
+            to:'/'
         },
         {
             icon: icon18,
             active: active18,
             label: 'QR Platform',
+            to:'/'
         },
 
     ]
@@ -173,7 +193,10 @@ export default function ProductsNav({ showNote, setActiveLink }) {
                                         <Grid item sm={3} xs={12}>
                                             <div className="naved-items">
                                                 {data1.map(item => (
-                                                    <div className="naved-item" key={item.label} onMouseEnter={() => setHovered(item.label)}>
+                                                    <div className="naved-item" key={item.label} 
+                                                    onMouseEnter={() => setHovered(item.label)}
+                                                    onClick={()=> navigate(item?.to)}
+                                                    >
                                                         <div className="naved-img-box">
                                                             {hovered === item.label ? <img src={item.active} alt="img" /> :
                                                                 <img src={item.icon} alt="img" />}
@@ -187,7 +210,10 @@ export default function ProductsNav({ showNote, setActiveLink }) {
                                         <Grid item sm={3} xs={12}>
                                             <div className="naved-items">
                                                 {data2.map(item => (
-                                                    <div className="naved-item" key={item.label} onMouseEnter={() => setHovered(item.label)}>
+                                                    <div className="naved-item" key={item.label}
+                                                    onMouseEnter={() => setHovered(item.label)}
+                                                    onClick={()=> navigate(item?.to)}
+                                                    >
                                                         <div className="naved-img-box">
                                                             {hovered === item.label ? <img src={item.active} alt="img" /> :
                                                                 <img src={item.icon} alt="img" />}

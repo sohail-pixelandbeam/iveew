@@ -63,10 +63,6 @@ export default function NavBar({ active, hideModal }) {
         setMenu(false);
     }
 
-    useEffect(() => {
-        console.log(activeLink)
-    }, [activeLink])
-
 
 
 
@@ -92,7 +88,7 @@ export default function NavBar({ active, hideModal }) {
                         >Products
                             {activeLink === 'Products' ? <KeyboardArrowUpIcon fontSize="small" sx={{ color: '#F56B3F' }} /> : <KeyboardArrowDownIcon fontSize="small" />}
                         </div>
-                        <div
+                        {/* <div
                             className="link-nb"
                             onMouseEnter={() => onCursorEnter('Solutions')}
                             onClick={() => onCursorEnter('Solutions')}
@@ -105,7 +101,7 @@ export default function NavBar({ active, hideModal }) {
                             onClick={() => onCursorEnter('Resources')}
                         >Resources
                             {activeLink === 'Resources' ? <KeyboardArrowUpIcon fontSize="small" sx={{ color: '#F56B3F' }} /> : <KeyboardArrowDownIcon fontSize="small" />}
-                        </div>
+                        </div> */}
                         <div
                             className="link-nb"
                             onMouseEnter={() => onCursorEnter('Pricing')}
@@ -138,8 +134,8 @@ export default function NavBar({ active, hideModal }) {
                 {activeLink === 'Products' && <ProductsNav showNote={showNote}
                     setActiveLink={setActiveLink}
                 />}
-                {activeLink === 'Solutions' && <SolutionsNav showNote={showNote} setActiveLink={setActiveLink} />}
-                {activeLink === 'Resources' && <ResourcesNav showNote={showNote} setActiveLink={setActiveLink} />}
+                {/* {activeLink === 'Solutions' && <SolutionsNav showNote={showNote} setActiveLink={setActiveLink} />}
+                {activeLink === 'Resources' && <ResourcesNav showNote={showNote} setActiveLink={setActiveLink} />} */}
             </div>
         </div >
     )

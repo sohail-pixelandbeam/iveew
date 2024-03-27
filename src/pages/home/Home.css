@@ -13,16 +13,9 @@
 }
 
 .home-banner-heading {
-    font-family: Poppins-ExtraBold;
+    font-family: Poppins-Bold;
     font-size: 53px;
     margin-bottom: 10%;
-    margin-top: 5%;
-}
-
-.home-banner-right {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
 }
 
 .home-banner-right div {
@@ -52,33 +45,6 @@
 
 .home-sec-2-img {
     width: 100%;
-    margin-top: 8%;
-    margin-bottom: 3%;
-}
-
-/* section 2 watch  */
-.home-sec2-watch-box{
-    background-color: black;
-    min-height: 300px;
-}
-
-.home-watch-heading{
-    color: white;
-    font-size: Poppins-SemiBold;
-    font-size: 28px;
-    margin-bottom: 5%;
-}
-
-.home-watch-content{
-    color: white;
-    font-size: 20px;
-    line-height: 32px;
-    font-family: Poppins-Regular;
-    margin-right: 5%;
-}
-
-.home-watch-img{
-    cursor: pointer;
 }
 
 /* section 3  */
@@ -136,7 +102,7 @@
 }
 
 .home-card-data {
-    margin-top: 110px;
+    margin-top: 120px;
 }
 
 .home-card-heading {
@@ -147,17 +113,14 @@
 .home-card-content {
     font-family: Poppins-Regular;
     font-size: 17px;
-    line-height: 27px;
-    margin: 25px 0px;
-    margin-right: 3%;
+    margin: 15px 0px;
 }
 
 .home-sec5-author-text {
-    font-size: 41px;
+    font-size: 30px;
 }
 
 .home-sec5-author-name {
-    font-size: 20px;
     margin: 25px 0px;
 }
 
@@ -179,11 +142,9 @@
 
 .home-sec6-content {
     font-size: 20px;
-    line-height: 30px;
     font-family: Poppins-Regular;
     color: white;
     margin: 40px 0px;
-    margin-right: 5%;
 }
 
 /* home section 7  */
@@ -191,23 +152,14 @@
     border: 2px solid #F56B3F;
     padding: 8%;
     border-radius: 20px;
-    min-height: 550px;
+    min-height: 470px;
 }
 
 .pricingCard-heading {
-    font-family: Poppins-Bold;
-    font-size: 40px;
-    line-height: 52px;
-}
-
-.pricingCard-explanation{
-    color: #454545;
-    margin: 10px 0px;
-}
-
-.pricingCard-price{
-    color: #212121;
-    font-size: 32px;
+    font-family: Poppins-SemiBold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
 }
 
 .priceCard-note {
@@ -218,15 +170,14 @@
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .priceCard-features div {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 10px;
     font-family: Poppins-Regular;
-    color: #212121;
 }
 
 .home-sec7-bgBox {
@@ -295,7 +246,6 @@
 .sliderItem-content {
     color: #212121;
     margin: 20px 0px;
-    margin-right: 20px;
 }
 
 .slick-slide>div {
@@ -306,8 +256,10 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 5%;
+    margin-top: -25px;
+    z-index: 5;
+    position: absolute;
 }
 
 .slider-navigation img {
@@ -352,8 +304,10 @@
     /* section 2  */
 
     .slider-navigation {
-        margin-top: 50px;
+        margin-bottom: 50px;
+        
     }
+
 
     .card-marginT {
         margin-top: 10px;

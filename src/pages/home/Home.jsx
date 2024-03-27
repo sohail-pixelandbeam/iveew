@@ -41,10 +41,10 @@ import Footer from '../../components/footer/Footer';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Padding } from '@mui/icons-material';
 
 export default function Home() {
-    let [hideModal, setHideModal] = useState(true)
+    let [hideModal, setHideModal] = useState(true);
+    let [currentSlide, setCurrentSlide] = useState(0);
     const bannerFacilities = ['Message-360', '1-1 Message', 'Message-Segmentation', 'Blas-M','Booking Engine-Script', 'Guest Return (OTA Con)', 'Guest Recognition', 'Special Occasions', 'Voucher-Loyality-Gift cards0', 'Market-Segmentation', 'Geofencing-Virtual Fence','Geo-Conquesting','Chatbot AI', 'RFID-Marketing', 'QR Platform' ]
     const pricingData = [
         {
@@ -97,7 +97,7 @@ export default function Home() {
         }
     ]
     var settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -131,6 +131,20 @@ export default function Home() {
         ]
     };
     let sliderRef = useRef(null);
+
+    const prevSlide = () => {
+        if (currentSlide > 0) {
+            setCurrentSlide(currentSlide - 1);
+            sliderRef.slickPrev();
+        }
+    }
+
+    const nextSlide = () => {
+        if (currentSlide < (sliderData.length - 1)) {
+            setCurrentSlide(currentSlide + 1);
+            sliderRef.slickNext();
+        }
+    }
     return (
         <>
             <NavBar hideModal={hideModal} />
@@ -329,9 +343,10 @@ export default function Home() {
                     </div>
                 </section>
                 {/* section 8  */}
-                <section className="home-sec8-box padding">
+                {/* section 8  */}
+                <section className="home-sec8-box" style={{ paddingBottom: '30px' }}>
                     <div className="global-heading1">Insights on AI- powered iveew chatbot.</div>
-                    <div className='home-slider margin-home' >
+                    <div className='home-slider margin-home padding' style={{ paddingBottom: '10px' }} >
                         <Slider
                             ref={slider => {
                                 sliderRef = slider;
@@ -345,10 +360,45 @@ export default function Home() {
                                 </div>
                             ))}
                         </Slider>
+                    </div>
+
+                    {/* slider ruler  */}
+                    <div
+                        style={{
+                            height: '5px',
+                            background: 'transparent',
+                            width: '100%',
+                            margin: '5% 0px',
+                            position: 'relative'
+                        }}
+                    >
                         <div className='slider-navigation'>
-                            <img onClick={() => sliderRef.slickPrev()} src={prev} alt="prev" />
-                            <img onClick={() => sliderRef.slickNext()} src={next} alt="next" />
+                            <img onClick={prevSlide} src={prev} alt="prev"
+                                style={{
+                                    opacity: currentSlide === 0 ? 0.5 : 1,
+                                    cursor: currentSlide === 0 ? 'default' : 'pointer'
+                                }}
+                            />
+                            <img onClick={nextSlide} src={next} alt="next"
+                                style={{
+                                    opacity: currentSlide === (sliderData.length - 1) ? 0.5 : 1,
+                                    cursor: currentSlide === (sliderData.length - 1) ? 'default' : 'pointer'
+                                }}
+                            />
                         </div>
+                        <div
+                            style={{
+                                position: 'absolute',
+                                top: '0px',
+                                height: '5px',
+                                background: 'gray',
+                                zIndex: 2,
+                                transition: '0.5s ease',
+                                width: `${100 / sliderData.length}%`,
+                                left: `${currentSlide * (100 / sliderData.length)}%`,
+                                borderRadius: '5px'
+                            }}
+                        />
                     </div>
                 </section>
                 {/* Footer  */}
