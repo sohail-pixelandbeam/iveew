@@ -1,0 +1,65 @@
+.message360ImgPadding{
+    padding: 0px 12%;
+}
+
+.message360ImgPadding img{
+    width: 100%;
+}
+
+.message360-heading1{
+    font-size: 26px;
+    font-family: Poppins-SemiBold;
+    color: black;
+    line-height: 34px;
+}
+
+.message360-text1{
+    font-size: 16px;
+    font-family: Poppins-Regular;
+    line-height: 25px;
+    color: black;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.message360-hero{
+    background-image: url('../../assets/imgs/message360bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.message360-hero-heading{
+    font-size: 85px;
+    font-family: Poppins-ExtraBold;
+    color: white;
+    text-align: center;
+}
+
+.message360-hero-contentBox{
+    padding: 15%;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.message360-hero-content{
+    font-size: 23px;
+    color: white;
+    font-family: Poppins-SemiBold;
+    line-height: 34px;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:799px) {
+    .message360-hero-heading{
+        font-size: 40px;
+    }
+}
