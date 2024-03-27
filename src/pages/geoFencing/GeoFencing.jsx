@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './GeoFencing.css';
 import NavBar from '../../components/navbar/Navbar';
 import geoImg1 from '../../assets/imgs/geoImg1.png';
@@ -21,7 +21,10 @@ import { Grid } from '@mui/material';
 import Footer from '../../components/footer/Footer';
 
 export default function GeoFencing() {
-    let [hideModal, setHideModal] = useState(true)
+    let [hideModal, setHideModal] = useState(true);
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     return (
         <>
             <NavBar hideModal={hideModal} />

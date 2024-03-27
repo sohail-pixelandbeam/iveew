@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import NavBar from '../../components/navbar/Navbar';
 import { Grid } from '@mui/material';
@@ -145,6 +145,9 @@ export default function Home() {
             sliderRef.slickNext();
         }
     }
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     return (
         <>
             <NavBar hideModal={hideModal} />

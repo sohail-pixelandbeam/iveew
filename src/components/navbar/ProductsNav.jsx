@@ -112,7 +112,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
         {
             icon: icon11,
             active: active11,
-            label: 'Geofencing-Virtual Fence',
+            label: 'Geo-fencing',
             to:'/GeoFencing'
         },
         {
@@ -212,7 +212,9 @@ export default function ProductsNav({ showNote, setActiveLink }) {
                                                 {data2.map(item => (
                                                     <div className="naved-item" key={item.label}
                                                     onMouseEnter={() => setHovered(item.label)}
-                                                    onClick={()=> navigate(item?.to)}
+                                                    onClick={()=> {
+                                                        navigate(item?.to);
+                                                    }}
                                                     >
                                                         <div className="naved-img-box">
                                                             {hovered === item.label ? <img src={item.active} alt="img" /> :
