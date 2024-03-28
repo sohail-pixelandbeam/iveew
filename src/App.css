@@ -23,6 +23,22 @@
     font-family: Poppins-Regular;
 }
 
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.mt-40{
+    margin-top: 40px;
+}
+
+.mb-8per{
+    margin-bottom: 8%;
+}
+
+.mt-8per{
+    margin-top: 8%;
+}
+
 
 @media screen and (max-width:699px) {
     .global-heading1 {

@@ -49,7 +49,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon1,
             active: active1,
             label: 'Message-360',
-            to:'/'
+            to:'/Message360',
         },
         {
             icon: icon2,
@@ -134,7 +134,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon14,
             active: active14,
             label: 'Messaging',
-            to:'/'
+            to:'/SpecialityMessaging',
         },
         {
             icon: icon15,
@@ -162,6 +162,11 @@ export default function ProductsNav({ showNote, setActiveLink }) {
         },
 
     ]
+
+    const handleNavigation = (to) => {
+        navigate(to);
+        setShow(false);
+    }
     return (
         <>
             <Modal open={show}>
@@ -195,7 +200,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
                                                 {data1.map(item => (
                                                     <div className="naved-item" key={item.label} 
                                                     onMouseEnter={() => setHovered(item.label)}
-                                                    onClick={()=> navigate(item?.to)}
+                                                    onClick={() => handleNavigation(item?.to)}
                                                     >
                                                         <div className="naved-img-box">
                                                             {hovered === item.label ? <img src={item.active} alt="img" /> :
@@ -212,9 +217,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
                                                 {data2.map(item => (
                                                     <div className="naved-item" key={item.label}
                                                     onMouseEnter={() => setHovered(item.label)}
-                                                    onClick={()=> {
-                                                        navigate(item?.to);
-                                                    }}
+                                                    onClick={() => handleNavigation(item?.to)}
                                                     >
                                                         <div className="naved-img-box">
                                                             {hovered === item.label ? <img src={item.active} alt="img" /> :
@@ -229,7 +232,9 @@ export default function ProductsNav({ showNote, setActiveLink }) {
                                         <Grid item sm={3} xs={12}>
                                             <div className="naved-items">
                                                 {data3.map(item => (
-                                                    <div className="naved-item" key={item.label} onMouseEnter={() => setHovered(item.label)}>
+                                                    <div className="naved-item" key={item.label} onMouseEnter={() => setHovered(item.label)}
+                                                    onClick={() => handleNavigation(item?.to)}
+                                                    >
                                                         <div className="naved-img-box">
                                                             {hovered === item.label ? <img src={item.active} alt="img" /> :
                                                                 <img src={item.icon} alt="img" />}

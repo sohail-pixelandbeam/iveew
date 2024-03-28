@@ -176,7 +176,7 @@ export default function Home() {
                 </section>
                 {/* section 2  */}
                 <section className='home-sec2-box padding'>
-                    <div className="global-heading1">Empower customers or guests to receive   <br />personalized offers that relate to them the most</div>
+                    <div className="global-heading1" style={{marginBottom:'8%'}}>Empower customers or guests to receive   <br />personalized offers that relate to them the most</div>
                    
                     <div className='home-sec2-imgs' >
                         <img className='home-sec-2-img' src={imgAffliation} alt="companies" />
