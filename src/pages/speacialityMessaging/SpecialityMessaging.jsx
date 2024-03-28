@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './SpecialityMessaging.css'
 import spMsgImg1 from '../../assets/imgs/spMsgImg1.png'
 import spMsgImg2 from '../../assets/imgs/spMsgImg2.png'
@@ -14,7 +14,9 @@ import SliderCustom from '../../components/sliderCustom/SliderCustom'
 
 
 export default function SpecialityMessaging() {
-
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <>
       <NavBar hideModal={true} />

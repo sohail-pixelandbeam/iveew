@@ -86,7 +86,7 @@ export default function SliderCustom() {
   return (
     <section className="home-sec8-box">
     <div className="global-heading1">Insights on AI- powered iveew chatbot.</div>
-    <div className='home-slider margin-home padding' style={{ paddingBottom: '10px' }} >
+    <div className='home-slider padding' style={{ paddingBottom: '10px' }} >
         <Slider
             ref={slider => {
                 sliderRef = slider;

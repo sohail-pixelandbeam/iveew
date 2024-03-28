@@ -88,7 +88,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon7,
             active: active7,
             label: 'Guest Recognition',
-            to:'/'
+            to:'/GuestRecognition'
         },
         {
             icon: icon8,
