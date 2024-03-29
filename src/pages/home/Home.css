@@ -28,13 +28,19 @@
 /* section 2  */
 
 .home-sec2-box {
-    background-color: #F9F9F9;
+    background-color: #FFFFFF;
     text-align: center;
 }
 
 .home-sec2-content {
     padding: 5% 15%;
     text-align: center;
+}
+
+.home-sec2-text{
+    font-size: 21px;
+    color: black;
+    margin-bottom: 7%;
 }
 
 .home-sec2-imgs {
@@ -47,6 +53,37 @@
     width: 100%;
 }
 
+.home-sec2-watch-main{
+    margin-top: 8%;
+    /* background-color: gray; */
+    padding: 2% ;
+    position: relative;
+}
+
+.home-sec2-video-box{
+    position: absolute;
+    top: 0px;
+}
+
+.home-sec2-watch-box{
+    background: linear-gradient(to right, #1D2043,#463B35,#05040A);
+    border-radius: 25px;
+    color: white;
+    padding: 3%;
+
+}
+
+.home-watch-heading{
+    font-family: Poppins-SemiBold;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.home-watch-content{
+    font-size: 20px;
+    line-height: 32px;
+    text-align: left;
+}
 /* section 3  */
 .home-sec3-box {
     background: white;

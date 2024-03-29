@@ -1,18 +1,10 @@
 import React, { useEffect } from 'react'
 import './GuestRecognition.css'
-import guestRecImg1 from '../../assets/imgs/guestRecImg1.png'
 import guestRecImg2 from '../../assets/imgs/guestRecImg2.png'
-import guestRecImg3 from '../../assets/imgs/guestRecImg3.png'
 import guestRecImg4 from '../../assets/imgs/guestRecImg4.png'
-import spMsgImg1 from '../../assets/imgs/spMsgImg1.png'
-import spMsgImg2 from '../../assets/imgs/spMsgImg2.png'
-import spMsgImg3 from '../../assets/imgs/spMsgImg3.png'
-import spMsgImg4 from '../../assets/imgs/spMsgImg4.png'
-import spMsgImg5 from '../../assets/imgs/spMsgImg5.png'
 import { Grid } from '@mui/material'
 import Btn from '../../components/btn/Btn'
 import NavBar from '../../components/navbar/Navbar'
-import EastIcon from '@mui/icons-material/East';
 import Footer from '../../components/footer/Footer'
 import SliderCustom from '../../components/sliderCustom/SliderCustom'
 

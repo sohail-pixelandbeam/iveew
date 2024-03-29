@@ -30,6 +30,9 @@ import img23 from '../../assets/imgs/img23.png';
 import img24 from '../../assets/imgs/img24.png';
 import prev from '../../assets/imgs/prev.png';
 import next from '../../assets/imgs/next.png';
+import affImg1 from '../../assets/imgs/affImg1.png'
+import affImg2 from '../../assets/imgs/affImg2.png'
+import affImg3 from '../../assets/imgs/affImg3.png'
 import solutionsImg from '../../assets/imgs/solutionsImg.png';
 import tickIcon from '../../assets/imgs/tickIcon.png'
 import { CardLeft } from './CardLeft';
@@ -41,37 +44,38 @@ import Footer from '../../components/footer/Footer';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SliderCustom2 from '../../components/sliderCustom2/SliderCustom2';
 
 export default function Home() {
     let [hideModal, setHideModal] = useState(true);
     let [currentSlide, setCurrentSlide] = useState(0);
-    const bannerFacilities = ['Message-360', '1-1 Message', 'Message-Segmentation', 'Blas-M','Booking Engine-Script', 'Guest Return (OTA Con)', 'Guest Recognition', 'Special Occasions', 'Voucher-Loyality-Gift cards0', 'Market-Segmentation', 'Geofencing-Virtual Fence','Geo-Conquesting','Chatbot AI', 'RFID-Marketing', 'QR Platform' ]
+    const bannerFacilities = ['Message-360', '1-1 Message', 'Message-Segmentation', 'Blas-M', 'Booking Engine-Script', 'Guest Return (OTA Con)', 'Guest Recognition', 'Special Occasions', 'Voucher-Loyality-Gift cards0', 'Market-Segmentation', 'Geofencing-Virtual Fence', 'Geo-Conquesting', 'Chatbot AI', 'RFID-Marketing', 'QR Platform']
     const pricingData = [
         {
-        heading: "Essentials",
-        explanation:"For startups and growing companies",
-        price: "$0 user/month",
-        btnLabel: "Open an account - for free",
-        features: ['Global corporate cards', 'Business account and bill pay', '$6M FDIC coverage adn 4.90% yield', 'Integrated expense management', 'Brex AI expense assistant', 'Real-time spend reporting', 'Accounting integrations', '24/7 support'],
-    },
-    {
-        heading: "Premium",
-        explanation:"For mid-sized companies looking to scale",
-        price: "$12 user/month",
-        btnLabel: "Contact sales",
-        features: ['Custom expense policies and approvals', 'In-app travel booking adn management', 'Live Budgets with real-time tracking', 'Custom procurement workflows', 'Custom, automated HRIS and advanced accounting integration', 'Dedicated support for admins'],
-        specialNote:'Everything in Essentials plus:',
-    },
-    {
-        heading: "Enterprise",
-        explanation:"For global enterprises with custom needs",
-        price: "Custom Pricing",
-        btnLabel: "Contact sales",
-        features: ['Local cards and billing in 50+ countries', 'Locally funded payments in 40+ countries', 'Unlimited policy customization', 'Advanced roles and permissions', 'Custom companies and audit reports', 'Top-tier onboarding and support'],
-        specialNote:'Everything in Premium plus:',
-    },
+            heading: "Essentials",
+            explanation: "For startups and growing companies",
+            price: "$0 user/month",
+            btnLabel: "Open an account - for free",
+            features: ['Global corporate cards', 'Business account and bill pay', '$6M FDIC coverage adn 4.90% yield', 'Integrated expense management', 'Brex AI expense assistant', 'Real-time spend reporting', 'Accounting integrations', '24/7 support'],
+        },
+        {
+            heading: "Premium",
+            explanation: "For mid-sized companies looking to scale",
+            price: "$12 user/month",
+            btnLabel: "Contact sales",
+            features: ['Custom expense policies and approvals', 'In-app travel booking adn management', 'Live Budgets with real-time tracking', 'Custom procurement workflows', 'Custom, automated HRIS and advanced accounting integration', 'Dedicated support for admins'],
+            specialNote: 'Everything in Essentials plus:',
+        },
+        {
+            heading: "Enterprise",
+            explanation: "For global enterprises with custom needs",
+            price: "Custom Pricing",
+            btnLabel: "Contact sales",
+            features: ['Local cards and billing in 50+ countries', 'Locally funded payments in 40+ countries', 'Unlimited policy customization', 'Advanced roles and permissions', 'Custom companies and audit reports', 'Top-tier onboarding and support'],
+            specialNote: 'Everything in Premium plus:',
+        },
 
-    
+
     ]
     const sliderData = [
         {
@@ -145,9 +149,9 @@ export default function Home() {
             sliderRef.slickNext();
         }
     }
-    useEffect(()=>{
+    useEffect(() => {
         window.scrollTo(0, 0);
-    },[])
+    }, [])
     return (
         <>
             <NavBar hideModal={hideModal} />
@@ -158,8 +162,8 @@ export default function Home() {
                         <Grid item sm={8} >
                             <div className="home-banner-heading">
                                 The AI Powered Tools <br />
-                            To Connect Customers <br />
-                            And Guests
+                                To Connect Customers <br />
+                                And Guests
                             </div>
                             <Btn label='Get Started' />
                         </Grid>
@@ -167,8 +171,8 @@ export default function Home() {
                             <div className="home-banner-right">
                                 {bannerFacilities.map(item => (
                                     <div key={item}>
-                                    <img src={tickIcon} alt="tickIcon" width='20px' />
-                                     {item}</div>
+                                        <img src={tickIcon} alt="tickIcon" width='20px' />
+                                        {item}</div>
                                 ))}
                             </div>
                         </Grid>
@@ -176,36 +180,53 @@ export default function Home() {
                 </section>
                 {/* section 2  */}
                 <section className='home-sec2-box padding'>
-                    <div className="global-heading1" style={{marginBottom:'8%'}}>Empower customers or guests to receive   <br />personalized offers that relate to them the most</div>
-                   
+                    <div className="global-heading1" style={{ marginBottom: '8%' }}>Empower customers or guests to receive   <br />personalized offers that relate to them the most</div>
+                    <div className="home-sec2-text">Trusted Customers</div>
                     <div className='home-sec2-imgs' >
-                        <img className='home-sec-2-img' src={imgAffliation} alt="companies" />
-                    </div>
-                </section>
-                {/* section 2 watch */}
-                <div className="home-sec2-watch-box">
-                    <div className="padding">
                         <Grid container spacing={5}>
-                            <Grid item sm={7} xs={12}>
-                                <div className="home-watch-heading">Guest Recognition</div>
-                                <div className="home-watch-content">
-                                Our patented guest recognition application allows hotels and businesses to recognize guests and customers when approaching the hotel or entering a store.
-                                <br/><br />
-                                  Geofencing and beacons allow hotels and businesses to see guests go through virtual geofence.
-                                <br /><br />
-                                 Greeting by their name, recognizing them in the lobby, front desk, restaurant or spa by using Beacons and Ultra WideBands. 
-                                </div>
+                            <Grid item sm={4} xs={12}>
+                                <img className='home-sec-2-img' src={affImg1} alt="companies" />
                             </Grid>
                             <Grid item sm={4} xs={12}>
-                                <img src={imgWatch} alt="imgWatch" width='100%' className='home-watch-img' />
+                                <img className='home-sec-2-img' src={affImg2} alt="companies" />
+                            </Grid>
+                            <Grid item sm={4} xs={12}>
+                                <img className='home-sec-2-img' src={affImg3} alt="companies" />
                             </Grid>
                         </Grid>
                     </div>
-                </div>
+                    {/* section 2 watch */}
+                    <div className='home-sec2-watch-main' >
+                        <div className="home-sec2-watch-box">
+                            <Grid container spacing={5}>
+                                <Grid item sm={6.5} xs={12}>
+                                    <div className="home-watch-heading">Guest Recognition</div>
+                                    <div className="home-watch-content">
+                                        Our patented guest recognition application allows hotels and businesses to recognize guests and customers when approaching the hotel or entering a store. Geofencing and beacons allow hotels and businesses to see guests go through virtual geofence.Greeting by their name, recognizing them in the lobby, front desk, restaurant or spa by using Beacons and Ultra WideBands. 
+                                    </div>
+                                </Grid>
+                                <Grid item sm={4} xs={12}>
+                                    <img src={imgWatch} alt="imgWatch" width='120%' className='home-watch-img' />
+                                </Grid>
+                            </Grid>
+                        </div>
+                        {/* <div className="home-sec2-video-box">
+                            <Grid container spacing={5}>
+                                <Grid item sm={6.5} xs={12}>
+                                </Grid>
+                                <Grid item sm={5} xs={12}>
+                                    <img src={imgWatch} alt="imgWatch" width='100%' className='home-watch-img' />
+                                </Grid>
+                            </Grid>
+                        </div> */}
+                    </div>
+                </section>
+
                 {/* section 3  */}
                 <section className='home-sec3-box padding'>
                     <div className="global-heading1">All your solutions. One <br /> Platform</div>
                     <div className="global-text1 home-sec2-content">Everything you need to control spend before it happens and empower teams confidently.</div>
+
                     <div className="">
                         <Grid container spacing={3}>
                             <Grid item md={2.4} sm={6} xs={12}>
@@ -225,7 +246,11 @@ export default function Home() {
                             </Grid>
                         </Grid>
                     </div>
+
+
                 </section>
+
+                {/* <SliderCustom2/> */}
                 {/* section 4  */}
                 <section className='home-sec4-box padding'>
                     <div className="global-heading1">Solutions</div>
@@ -307,7 +332,7 @@ export default function Home() {
                     <div className="padding">
                         <Grid container>
                             <Grid item sm={5} xs={12}>
-                                <div className="home-sec6-heading">The AI Powered tools  to connect customers  and <br/> guests</div>
+                                <div className="home-sec6-heading">The AI Powered tools  to connect customers  and <br /> guests</div>
                                 <div className="home-sec6-content">Learn how our spend platform can increase teh strategic impact of your finance team and future-proof your company.</div>
                                 <Btn label='Get Started' />
                             </Grid>
@@ -339,8 +364,8 @@ export default function Home() {
                         </div>
                         <div className="home-sec7-bgBox">
                             <div className="home-sec7-heading">Looking for more global features?</div>
-                            <div className="home-sec7-content">Check out our enterprise solution — it has everything you need to manage multi-entity travel, expenses, and procurement <br/>
-                             in real time, on one platform, around the world.</div>
+                            <div className="home-sec7-content">Check out our enterprise solution — it has everything you need to manage multi-entity travel, expenses, and procurement <br />
+                                in real time, on one platform, around the world.</div>
                             <Btn label="Explore our global enterprise solution" className='home-sec7-btn' />
                         </div>
                     </div>
