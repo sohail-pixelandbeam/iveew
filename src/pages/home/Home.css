@@ -8,14 +8,18 @@
     /* height: 600px; */
     padding: 8% 5%;
     padding-top: 200px;
-    background: linear-gradient(to right, #000000, #051527, #333333);
+    background: linear-gradient(to right, #1D2043, #463B35, #05040A);
     color: white;
 }
 
 .home-banner-heading {
     font-family: Poppins-Bold;
     font-size: 53px;
-    margin-bottom: 10%;
+}
+
+.home-banner-content{
+    margin: 8% 0px;
+    margin-right: 8%;
 }
 
 .home-banner-right div {
@@ -29,7 +33,7 @@
 
 .home-sec2-box {
     background-color: #FFFFFF;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .home-sec2-content {
@@ -40,7 +44,8 @@
 .home-sec2-text{
     font-size: 21px;
     color: black;
-    margin-bottom: 7%;
+    margin: 2% 0px;
+    text-align: center;
 }
 
 .home-sec2-imgs {
@@ -60,23 +65,55 @@
     position: relative;
 }
 
+/* right img  */
+
 .home-sec2-video-box{
     position: absolute;
     top: 0px;
+    right: 80px;
 }
+
+.home-watch-img{
+    min-width: 475px;
+    min-height: 386px;
+    width: 95%;
+    display: block;
+}
+
+.home-watch-img img,
+.home-watch-img video{
+    width: 100%;
+    border-radius: 25px;
+}
+
+
+
+.home-watch-img1{
+    display: none;
+}
+
+.home-watch-img1 img,
+.home-watch-img1 video{
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* left content  */
 
 .home-sec2-watch-box{
     background: linear-gradient(to right, #1D2043,#463B35,#05040A);
     border-radius: 25px;
     color: white;
     padding: 3%;
-
+    min-height: 350px;
 }
+
 
 .home-watch-heading{
     font-family: Poppins-SemiBold;
     font-size: 28px;
     margin-bottom: 40px;
+
 }
 
 .home-watch-content{
@@ -189,14 +226,24 @@
     border: 2px solid #F56B3F;
     padding: 8%;
     border-radius: 20px;
-    min-height: 470px;
+    min-height: 520px;
 }
 
 .pricingCard-heading {
-    font-family: Poppins-SemiBold;
-    font-size: 30px;
+    font-family: Poppins-Bold;
+    font-size: 40px;
     line-height: 35px;
-    text-align: center;
+}
+
+.pricingCard-explanation{
+    color: #454545;
+    margin: 15px 0px;
+}
+
+.pricingCard-price{
+    color: #212121;
+    font-size: 32px;
+    font-family: Poppins-Regular;
 }
 
 .priceCard-note {
@@ -293,7 +340,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     margin-top: -25px;
     z-index: 5;
     position: absolute;
@@ -317,7 +364,7 @@
     margin-top: 30px;
 }
 
-@media (max-width:699px) {
+@media  (max-width:699px) {
     .home-banner-box {
         padding-top: 150px;
     }
@@ -328,6 +375,15 @@
 
     .home-banner-right div {
         font-size: 14px;
+    }
+    .home-sec2-text{
+        margin: 0px;
+        margin-top: 8%;
+    }
+
+    .home-watch-content{
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .cardLeft-desktop {
@@ -349,4 +405,76 @@
     .card-marginT {
         margin-top: 10px;
     }
+}
+
+/* for home section 2 watch img  */
+
+@media (max-width:1500px) {
+    .home-watch-img{
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .home-sec2-video-box{
+        position: absolute;
+        top: 0px;
+        right: 100px;
+    }
+
+    .home-sec2-watch-box{
+        background: linear-gradient(to right, #1D2043,#463B35,#05040A);
+        border-radius: 25px;
+        color: white;
+        padding: 3%;
+        min-height: 314px;
+    }
+    
+}
+
+@media (max-width:1250px) {
+    .home-watch-img{
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .home-sec2-video-box{
+        position: absolute;
+        top: 0px;
+        right: 150px;
+    }
+
+    .home-sec2-watch-box{
+        background: linear-gradient(to right, #1D2043,#463B35,#05040A);
+        border-radius: 25px;
+        color: white;
+        padding: 3%;
+        min-height: 314px;
+    } 
+}
+
+@media (max-width:1000px) {
+    .home-watch-img{
+        width: 80%;
+        cursor: pointer;
+        display: none;
+    }
+
+    .home-watch-img1{
+        width: 100%;
+        cursor: pointer;
+        display: block;
+        border-radius: 25px;  
+    }
+
+    .home-sec2-video-box{
+        position: absolute;
+        left: 20px;
+    }
+
+    .home-sec2-watch-box{
+        background: linear-gradient(to right, #1D2043,#463B35,#05040A);
+        border-radius: 25px;
+        color: white;
+        padding: 8%;
+    } 
 }

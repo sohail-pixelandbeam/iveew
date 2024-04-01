@@ -100,17 +100,10 @@ export default function SliderCustom() {
                 </div>
             ))}
         </Slider>
-    </div>
 
-    {/* slider ruler  */}
+          {/* slider ruler  */}
     <div
-        style={{
-            height: '5px',
-            background: 'transparent',
-            width: '100%',
-            margin: '5% 0px',
-            position: 'relative'
-        }}
+        className='customeSlder-ruler'
     >
         <div className='slider-navigation'>
             <img onClick={prevSlide} src={prev} alt="prev"
@@ -140,6 +133,10 @@ export default function SliderCustom() {
             }}
         />
     </div>
+
+    </div>
+
+  
 </section>
   )
 }

@@ -142,17 +142,6 @@
 }
 
 @media screen and (max-width:699px) {
-    .global-heading1 {
-        font-family: Poppins-Bold, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 26px;
-        line-height: 30px;
-        text-align: center;
-    }
-
-    .global-text1 {
-        font-size: 14px;
-    }
-
     .navBar-note {
         height: 45px;
         padding-left: 20px;
