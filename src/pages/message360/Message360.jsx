@@ -11,8 +11,10 @@ import message360icon2 from '../../assets/imgs/message360icon2.png'
 import geoFenceImg6 from '../../assets/imgs/geoFenceImg6.png';
 import { useEffect } from 'react'
 import Footer from '../../components/footer/Footer'
+import useIsMobile from '../../hooks/useIsMobile'
 
 export default function Message360() {
+    let isMobile = useIsMobile();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -49,10 +51,10 @@ export default function Message360() {
             </section>
             {/* section 3  */}
             <section className="padding" style={{ paddingTop: '2%' }}>
-                <div className="global-heading1 mb-8per">What does message-360 <br /> does?</div>
+                <div className="global-heading1 mb-8per marginT-mobile">What does message-360 <br className='desktop' /> does?</div>
                 <div className="mb-8per">
                     <Grid container spacing={5}>
-                        {window.innerWidth <= 700 &&
+                        {isMobile &&
                             <Grid item sm={6} xs={12}>
                                 <div className="message360Padding ">
                                     <img src={message360img2} alt="img" />
@@ -71,11 +73,11 @@ export default function Message360() {
                                 </div>
                             </div>
                         </Grid>
-                        <Grid item sm={6} xs={12}>
+                        {!isMobile && <Grid item sm={6} xs={12}>
                             <div className="message360Padding message360-desktopImg">
                                 <img src={message360img2} alt="img" />
                             </div>
-                        </Grid>
+                        </Grid>}
                     </Grid>
                 </div>
                 <div className="mb-8per">
@@ -100,7 +102,7 @@ export default function Message360() {
 
                     </Grid>
                 </div>
-                <div className="global-heading1" style={{ marginTop: '5%' }}>Encourage adoption with <br /> unbiased geo-fenced <br /> inventory.</div>
+                <div className="global-heading1" style={{ marginTop: '5%' }}>Encourage adoption with <br className='desktop' /> unbiased geo-fenced <br className='desktop' /> inventory.</div>
             </section>
             <img src={geoFenceImg6} alt="img" width='100%' />
             {/* section 4  */}
