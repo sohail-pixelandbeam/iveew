@@ -7,7 +7,7 @@ export const CardRight = ({ img, heading, content }) => {
     return (
         <div className='card-marginT'>
             <div>
-                <Grid container spacing={5}>
+                <Grid container spacing={2}>
                     <Grid item sm={6} xs={12}>
                         <div className="home-card-data">
                             <div className="home-card-heading">{heading}</div>

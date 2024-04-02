@@ -190,6 +190,10 @@
     margin: 15px 0px;
 }
 
+.sec5-author-text-box{
+    margin-top: 100px;
+}
+
 .home-sec5-author-text {
     font-size: 30px;
 }
@@ -226,7 +230,7 @@
     border: 2px solid #F56B3F;
     padding: 8%;
     border-radius: 20px;
-    min-height: 520px;
+    min-height: 530px;
 }
 
 .pricingCard-heading {
@@ -400,11 +404,25 @@
         margin-bottom: 50px;
         
     }
-
-
-    .card-marginT {
-        margin-top: 10px;
+    .home-card-data {
+        margin-top: 20px;
     }
+
+    /* section 5  */
+
+    .sec5-author-text-box{
+        margin-top: 50px ;
+    }
+
+    .home-sec5-author-text {
+        font-size: 25px;
+    }
+    
+    .home-sec5-author-name {
+        margin: 25px 0px;
+    }
+
+
 }
 
 /* for home section 2 watch img  */

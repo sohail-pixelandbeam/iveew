@@ -200,12 +200,12 @@ export default function Home() {
                             content="Make expenses a breeze for employees and managers with automated receipts, an AI-powered expense assistant, in-app travel bookings and itinerary changes. All in a five-star mobile app."
                         />
                     </div>
-                    <div>
-                        <Grid container spacing={5} mt={15}>
+                    <div className='sec5-author-text-box'>
+                        <Grid container spacing={5} >
                             <Grid item sm={5} xs={12} >
                                 <img src={img15} alt="img" width="100%" />
                             </Grid>
-                            <Grid item sm={6} xs={12} mt={7} >
+                            <Grid item sm={6} xs={12} >
                                 <img src={img16} alt="img" width='250px' />
                                 <div className="home-sec5-author-text">
                                     “iVeeW has been a major gain for us in efficiency for T&E. It’s easy for employees to understand where and how to spend.”

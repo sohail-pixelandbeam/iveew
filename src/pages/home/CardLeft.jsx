@@ -7,7 +7,7 @@ export const CardLeft = ({ img, heading, content }) => {
     return (
         <div className='card-marginT'>
             <div className="cardLeft-desktop" >
-                <Grid container spacing={5}>
+                <Grid container spacing={2}>
                     <Grid item sm={6} xs={12}>
                         <img src={img} alt="img" width='95%' />
                     </Grid>
@@ -21,7 +21,7 @@ export const CardLeft = ({ img, heading, content }) => {
                 </Grid >
             </div>
             <div className="cardLeft-mobile">
-                <Grid container spacing={5}>
+                <Grid container spacing={2}>
                     <Grid item sm={6} xs={12}>
                         <div className="home-card-data">
                             <div className="home-card-heading">{heading}</div>
