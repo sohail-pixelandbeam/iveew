@@ -9,8 +9,13 @@ import social5 from '../../assets/imgs/social5.png'
 import appStore from '../../assets/imgs/appStore.png'
 import playStore from '../../assets/imgs/playStore.png'
 import { Grid } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 export default function Footer() {
+    const navigate = useNavigate();
+    const handleNavigate = (to) => {
+        navigate(to);
+    }
     return (
         <div className='f-box'>
             <div className="padding" style={{ paddingBottom: '3%' }}>
@@ -20,37 +25,37 @@ export default function Footer() {
                     </Grid>
                     <Grid item sm={3} xs={6} >
                         <div className="f-linkBold">Product</div>
-                        <div className="f-link">Geo-fence</div>
-                        <div className="f-link">Personalizaiton</div>
-                        <div className="f-link">Reputation Management</div>
-                        <div className="f-link">Message-360</div>
-                        <div className="f-link">Message- Segmentation</div>
-                        <div className="f-link">Blast-M</div>
-                        <div className="f-link">Chatbot AI</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/GeoFencing')}>Geo-fence</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Personalizaiton</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/ReputationManagement')}>Reputation Management</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Message-360</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Message- Segmentation</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Blast-M</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Chatbot AI</div>
                     </Grid>
                     <Grid item sm={2.25} xs={6} >
                         <div className="f-linkBold">Solution</div>
-                        <div className="f-link">SMB</div>
-                        <div className="f-link">SME</div>
-                        <div className="f-link">Enterprise</div>
-                        <div className="f-link">Live Budgets</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>SMB</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>SME</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Enterprise</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Live Budgets</div>
                     </Grid>
                     <Grid item sm={2.25} xs={6} >
                         <div className="f-linkBold">Pricing</div>
-                        <div className="f-link">About iVeew</div>
-                        <div className="f-link">Careers</div>
-                        <div className="f-link">Contact</div>
-                        <div className="f-link">Partner portal</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>About iVeew</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Careers</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')} >Contact</div>
+                        <div className="f-link"  onClick={()=>handleNavigate('/')}>Partner portal</div>
                     </Grid>
                     <Grid item sm={2} xs={6} >
                         <div className="f-linkBold">Resources</div>
-                        <div className="f-link">Customer Hub</div>
-                        <div className="f-link">Help center</div>
-                        <div className="f-link">Resource center & blog</div>
-                        <div className="f-link">Accounting services</div>
-                        <div className="f-link">Status</div>
-                        <div className="f-link">Legal agreement</div>
-                        <div className="f-link">Privacy</div>
+                        <div className="f-link" onClick={()=>handleNavigate('/')} >Customer Hub</div>
+                        <div className="f-link" onClick={()=>handleNavigate('/')} >Help center</div>
+                        <div className="f-link" onClick={()=>handleNavigate('/')} >Resource center & blog</div>
+                        <div className="f-link" onClick={()=>handleNavigate('/')}> Accounting services</div>
+                        <div className="f-link" onClick={()=>handleNavigate('/')} >Status</div>
+                        <div className="f-link" onClick={()=>handleNavigate('/')} >Legal agreement</div>
+                        <div className="f-link" onClick={()=>handleNavigate('/')} >Privacy</div>
                     </Grid>
                 </Grid>
                 <div className='f-bottom'>

@@ -5,7 +5,6 @@ import GeoFencing from '../pages/geoFencing/GeoFencing';
 import Message360 from '../pages/message360/Message360';
 import SpecialityMessaging from '../pages/speacialityMessaging/SpecialityMessaging';
 import GuestRecognition from '../pages/guestRecognition/GuestRecognition';
-import Reputation from '../pages/reputation/Reputation';
 import ReputationManagement from '../pages/reputationManagement/ReputationManagement';
 import BookingEngineScript from '../pages/bookingEngineScript/BookingEngineScript';
 import MessageMarketSegmentation from '../pages/messageMarketSegmentaion/MessageMarketSegmentation';
@@ -25,7 +24,6 @@ export default function AppRouter() {
                     <Route path='/Message360' element={<Message360/>}></Route>
                     <Route path='/SpecialityMessaging' element={<SpecialityMessaging/>}></Route>
                     <Route path='/GuestRecognition' element={<GuestRecognition/>}></Route>
-                    <Route path='/Reputation' element={<Reputation/>}></Route>
                     <Route path='/ReputationManagement' element={<ReputationManagement/>}></Route>
                     <Route path='/BookingEngineScript' element={<BookingEngineScript/>}></Route>
                     <Route path='/MessageMarketSegmentation' element={<MessageMarketSegmentation/>}></Route>

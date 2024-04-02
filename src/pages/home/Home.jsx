@@ -80,7 +80,7 @@ export default function Home() {
                     <Grid container spacing={5}>
                         <Grid item sm={6} >
                             <div className="home-banner-heading">
-                                The AI Powered Tools <br />
+                                The AI Powered Tools <br className='desktop'/>
                                 To Connect Customers <br />
                                 And Guests
                             </div>
@@ -123,7 +123,6 @@ export default function Home() {
                                 </Grid>
                                 <Grid item sm={4} xs={12}>
                                     <div className="home-watch-img1">
-
                                         {isVideoPlaying ? (
                                             <FullScreenVideo isVideoPlaying={isVideoPlaying} setIsVideoPlaying={setIsVideoPlaying} />
                                         ) : (
