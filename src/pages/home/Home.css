@@ -412,6 +412,7 @@
 
     .sec5-author-text-box{
         margin-top: 50px ;
+        margin-bottom: 50px;
     }
 
     .home-sec5-author-text {
@@ -420,6 +421,20 @@
     
     .home-sec5-author-name {
         margin: 25px 0px;
+    }
+
+    /* section 6  */
+
+    .home-sec6-heading {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    
+    .home-sec6-content {
+        font-size: 16px;
+        font-family: Poppins-Regular;
+        color: white;
+        margin: 40px 0px;
     }
 
 
