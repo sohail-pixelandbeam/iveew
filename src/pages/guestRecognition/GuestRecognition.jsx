@@ -22,7 +22,7 @@ export default function GuestRecognition() {
                     <Grid container spacing={5}>
                         <Grid item sm={6} xs={12}>
                             <div className="spMsg-hero-contentBox">
-                                <div className="spMsg-hero-heading ">Our <br /> patented <br /> guest recognition</div>
+                                <div className="spMsg-hero-heading ">Our <br className='desktop' /> patented <br className='desktop' /> guest recognition</div>
                                 <div className="spMsg-hero-btns">
                                     <Btn label='Get Started' />
                                     <Btn label="Open an account" className='geoFence-hero-btn' style={{ padding: '0px 45px' }} />
@@ -40,7 +40,7 @@ export default function GuestRecognition() {
                 <div>
                     <Grid container spacing={5}>
                         <Grid item sm={5} xs={12}>
-                            <div className="message360Padding message360-desktopImg">
+                            <div className="message360Padding marginT-mobile">
                                 <img src={guestRecImg2} alt="img" />
                             </div>
                         </Grid>
@@ -53,11 +53,6 @@ export default function GuestRecognition() {
                                 </div>
                             </div>
                         </Grid>
-                        {window.innerWidth <= 700 && <Grid item sm={6} xs={12}>
-                            <div className="message360Padding ">
-                                <img src={guestRecImg2} alt="img" />
-                            </div>
-                        </Grid>}
                     </Grid>
                 </div>
             </section>
@@ -65,19 +60,18 @@ export default function GuestRecognition() {
             <section className='mb-8per'>
                 <div className='guestRec-bgSec'>
                     <div className='guestRec-bgSec-left'>
-                        <h1>Unveiling recognition: <br />
-                            Your Path to <br />
-                            success, Guided by <br /> Experts</h1>
+                        <h1>Unveiling recognition: <br className='desktop' />
+                            Your Path to <br className='desktop' />
+                            success, Guided by <br className='desktop' /> Experts</h1>
                         <div className="spMsg-hero-btns" style={{marginTop:'30px'}}>
-                           
                                 <Btn label='Get Started' />
                                 <Btn label="Watch Video" style={{ color: 'black', border: '2px solid black', background: 'transparent' }} />
-                            
                         </div>
                     </div>
                     <img src={guestRecImg4} alt="img" />
                 </div>
             </section>
+            <div className="marginT-mobile"/>
             <SliderCustom />
             <section className="spMsg-padding">
                 <div className="spMsg-bgBox">
