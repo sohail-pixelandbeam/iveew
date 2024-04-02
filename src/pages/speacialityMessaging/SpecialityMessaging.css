@@ -80,5 +80,9 @@
 flex-direction: column;
     }
 
+    .spMsgcontentTopMargin {
+        margin-top:40px;
+    }
+
 
 }

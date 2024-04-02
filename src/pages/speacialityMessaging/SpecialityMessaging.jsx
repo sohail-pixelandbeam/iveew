@@ -11,9 +11,11 @@ import NavBar from '../../components/navbar/Navbar'
 import EastIcon from '@mui/icons-material/East';
 import Footer from '../../components/footer/Footer'
 import SliderCustom from '../../components/sliderCustom/SliderCustom'
+import useIsMobile from '../../hooks/useIsMobile'
 
 
 export default function SpecialityMessaging() {
+  let isMobile = useIsMobile();
   useEffect(()=>{
     window.scrollTo(0,0)
   },[])
@@ -25,7 +27,7 @@ export default function SpecialityMessaging() {
           <Grid container spacing={5}>
             <Grid item sm={6} xs={12}>
               <div className="spMsg-hero-contentBox">
-                <div className="spMsg-hero-heading ">The <br /> speciality <br /> of  messaging</div>
+                <div className="spMsg-hero-heading ">The <br className='desktop'/> speciality <br className='desktop' /> of  messaging</div>
                 <div className="spMsg-hero-btns">
                   <Btn label='Get Started' />
                   <Btn label="Open an account" className='geoFence-hero-btn' style={{ padding: '0px 45px' }} />
@@ -40,12 +42,12 @@ export default function SpecialityMessaging() {
       </div>
       {/* section 2  */}
       <section className="padding" style={{ paddingTop: '2%' }}>
-        <div className="global-heading1 mb-8per mt-8per">What does message-360 <br /> does?</div>
+        <div className="global-heading1 mb-8per mt-8per">What does message-360 <br className='desktop' /> does?</div>
         {/* 1st  */}
         <div className="mb-8per">
           <Grid container spacing={5}>
             <Grid item sm={5} xs={12}>
-              <div className="message360Padding message360-desktopImg">
+              <div className="message360Padding marginT-mobile">
                 <img src={spMsgImg2} alt="img" />
               </div>
             </Grid>
@@ -59,16 +61,16 @@ export default function SpecialityMessaging() {
                 <div className="home-card-btnTxt mb-30">Learn more about us <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
               </div>
             </Grid>
-            {window.innerWidth <= 700 && <Grid item sm={6} xs={12}>
-              <div className="message360Padding ">
-                <img src={spMsgImg2} alt="img" />
-              </div>
-            </Grid>}
           </Grid>
         </div>
         {/* 2nd  */}
         <div className="mb-8per">
           <Grid container spacing={5}>
+          {isMobile && <Grid item sm={6} xs={12}>
+              <div className="marginT-mobile">
+                <img src={spMsgImg3} alt="img" width='100%' />
+              </div>
+            </Grid>}
             <Grid item sm={6} xs={12}>
               <div className="message360Padding">
                 <div className="message360-heading1 mt-40 mb-40">Speciality Messaging</div>
@@ -78,18 +80,18 @@ export default function SpecialityMessaging() {
                 <div className="home-card-btnTxt mb-30">Learn more about us <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
               </div>
             </Grid>
-            <Grid item sm={6} xs={12}>
+            {!isMobile && <Grid item sm={6} xs={12}>
               <div className="">
                 <img src={spMsgImg3} alt="img" width='100%' />
               </div>
-            </Grid>
+            </Grid>}
           </Grid>
         </div>
         {/* 3rd  */}
         <div className="">
           <Grid container spacing={5}>
             <Grid item sm={6} xs={12}>
-              <div className=" message360-desktopImg spMsgImgSec2" >
+              <div className="spMsgImgSec2 marginT-mobile" >
                 <img src={spMsgImg4} alt="img" width='100%' />
               </div>
             </Grid>
@@ -108,16 +110,16 @@ export default function SpecialityMessaging() {
                 <div className="home-card-btnTxt mb-30">Learn more about us <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
               </div>
             </Grid>
-            {window.innerWidth <= 700 && <Grid item sm={6} xs={12}>
-              <div className="message360Padding ">
-                <img src={spMsgImg4} alt="img" />
-              </div>
-            </Grid>}
           </Grid>
         </div>
         {/* 4th  */}
         <div className="mb-8per">
           <Grid container spacing={5}>
+          {isMobile && <Grid item sm={6} xs={12}>
+              <div className="message360Padding marginT-mobile">
+                <img src={spMsgImg5} alt="img" width='90%' />
+              </div>
+            </Grid>}
             <Grid item sm={6} xs={12}>
               <div className="message360Padding">
                 <div className="message360-heading1 spMsgcontentTopMargin mb-40">A recent survey</div>
@@ -125,17 +127,15 @@ export default function SpecialityMessaging() {
                   A recent survey indicated that 19x more revenue per message from campaigns that use both SMS+ Mobile Wallet coupons. Reward them for becoming a loyal member.
                   <br /> <br />
                   There is more of a” stop” message when  “checking in” with a customer instead of sending them an offer
-
-
                 </div>
                 <div className="home-card-btnTxt mb-30">Learn more about us <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
               </div>
             </Grid>
-            <Grid item sm={6} xs={12}>
+            {!isMobile && <Grid item sm={6} xs={12}>
               <div className="message360Padding">
                 <img src={spMsgImg5} alt="img" width='90%' />
               </div>
-            </Grid>
+            </Grid>}
           </Grid>
         </div>     
       </section> 
