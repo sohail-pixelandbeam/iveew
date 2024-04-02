@@ -4,11 +4,6 @@ import NavBar from '../../components/navbar/Navbar';
 import { Grid } from '@mui/material';
 import Btn from '../../components/btn/Btn';
 import imgWatch from '../../assets/imgs/imgWatch.png'
-import img1 from '../../assets/imgs/img1.png';
-import img2 from '../../assets/imgs/img2.png';
-import img3 from '../../assets/imgs/img3.png';
-import img4 from '../../assets/imgs/img4.png';
-import img5 from '../../assets/imgs/img5.png';
 import img9 from '../../assets/imgs/img9.png';
 import img10 from '../../assets/imgs/img10.png';
 import img11 from '../../assets/imgs/img11.png';
@@ -33,7 +28,7 @@ import SliderCustom from '../../components/sliderCustom/SliderCustom'
 
 export default function Home() {
     let [hideModal, setHideModal] = useState(true);
-    const bannerFacilities = ['Message-360', '1-1 Message', 'Message-Segmentation', 'Blas-M', 'Booking Engine-Script', 'Guest Return (OTA Con)', 'Guest Recognition', 'Special Occasions', 'Voucher-Loyality-Gift cards0', 'Market-Segmentation', 'Geofencing-Virtual Fence', 'Geo-Conquesting', 'Chatbot AI', 'RFID-Marketing', 'QR Platform']
+   
     const pricingData = [
         {
             heading: "Essentials",

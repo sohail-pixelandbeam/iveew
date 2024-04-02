@@ -68,7 +68,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon3,
             active: active3,
             label: 'Message Market Segmentaion',
-            to:'/'
+            to:'/MessageMarketSegmentation'
         },
         {
             icon: icon4,
