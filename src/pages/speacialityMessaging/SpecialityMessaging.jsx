@@ -42,9 +42,8 @@ export default function SpecialityMessaging() {
       </div>
       {/* section 2  */}
       <section className="padding" style={{ paddingTop: '2%' }}>
-        <div className="global-heading1 mb-8per mt-8per">What does message-360 <br className='desktop' /> does?</div>
         {/* 1st  */}
-        <div className="mb-8per">
+        <div className="mb-8per mt-8per">
           <Grid container spacing={5}>
             <Grid item sm={5} xs={12}>
               <div className="message360Padding marginT-mobile">
