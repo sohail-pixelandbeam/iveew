@@ -80,7 +80,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon5,
             active: active5,
             label: 'Booking Engine-Script',
-            to:'/'
+            to:'/BookingEngineScript'
         },
         
     ]
