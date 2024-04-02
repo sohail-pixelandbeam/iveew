@@ -19,19 +19,21 @@ import Btn from '../../components/btn/Btn';
 import InputField from '../../components/inputField/InputField'
 import { Grid } from '@mui/material';
 import Footer from '../../components/footer/Footer';
+import useIsMobile from '../../hooks/useIsMobile';
 
 export default function GeoFencing() {
     let [hideModal, setHideModal] = useState(true);
-    useEffect(()=>{
+    let isMobile = useIsMobile();
+    useEffect(() => {
         window.scrollTo(0, 0);
-    },[])
+    }, [])
     return (
         <>
             <NavBar hideModal={hideModal} />
             {/* section 1  */}
             <section className='geoFence-hero'>
                 <div className="geoFence-hero-contentBox">
-                    <div className="geoFence-hero-heading">Geo fencing <br /> revolutionizes travel</div>
+                    <div className="geoFence-hero-heading">Geo fencing <br className='desktop' /> revolutionizes travel</div>
                     <div className="geoFence-hero-content">In essence, geofencing is a versatile tool that  enables businesses to engage with consumers in  real time based on their physical location, offering  personalized experiences and targeted marketing  messages.</div>
                     <div className="geoFence-hero-btns">
                         <Btn label='Get Started' />
@@ -70,6 +72,11 @@ export default function GeoFencing() {
             {/* section 3  */}
             <section className='padding'>
                 <Grid container spacing={5}>
+                    {isMobile &&
+                        <Grid item sm={6} xs={12}>
+                            <img src={geoFenceImg2} alt="img" width='100%' />
+                        </Grid>
+                    }
                     <Grid item sm={6} xs={12}>
                         <div className="geoFence-sec3-leftBox">
                             <img src={geoFenceIcon1} alt='icon' />
@@ -79,50 +86,50 @@ export default function GeoFencing() {
                             <InputField placeholder='Email (Company Only)' />
                             <div className="geoFence-sec3-inpBtn">
                                 <InputField placeholder='Business' />
-                                <Btn label='Send' style={{ backgroundColor: 'black', height: '57px' }} />
+                                <Btn label='Send' style={{ backgroundColor: 'black', height: isMobile?'auto':'57px' }} />
                             </div>
                         </div>
                     </Grid>
-                    <Grid item sm={6} xs={12}>
-                        <img src={geoFenceImg2} alt="img" width='100%' />
-                    </Grid>
+                    {!isMobile && <Grid item sm={6} xs={12}>
+                        <img src={geoFenceImg2} alt="img" width='100%' className='desktop-img' />
+                    </Grid>}
 
                 </Grid>
             </section>
             {/* section 4  */}
-            <section className="padding">
+            <section className="padding marginT-mobile">
                 <Grid container spacing={5}>
                     <Grid item sm={6} xs={12}>
                         <div className="geoFence-sec4-leftBox">
                             <img src={geoFenceImg3} alt="img" width='95%' />
-                            <div className="geoFence-heading2" style={{ marginBottom: '20px' }}>Email us at: <span>goals@iveew.co</span></div>
+                            <div className="geoFence-heading2 marginT-mobile" style={{ marginBottom: '20px' }}>Email us at: <span>goals@iveew.co</span></div>
                             <div className="geoFence-heading2">Or text us at: <span> (800) 321-3400</span></div>
                         </div>
                     </Grid>
                     <Grid item sm={6} xs={12}>
                         <div className="geoFence-sec4-rightBox">
-                            <img src={geoFenceIcon2} alt='icon' className='geoFence-icon' style={{ marginLeft: '10px' }} />
-                            <div className="geoFence-heading1" style={{ margin: '15px 0px', marginLeft: '10px' }}>Determine your Goals</div>
-                            <p style={{ marginLeft: '10px' }}>Tell us how we can help you</p>
+                            <img src={geoFenceIcon2} alt='icon' className='geoFence-icon' />
+                            <div className="geoFence-heading1" style={{ margin: '15px 0px' }}>Determine your Goals</div>
+                            <p >Tell us how we can help you</p>
                             <br />
-                            <p>
-                                •Next to a Great Hotel and is there any way we can be seen by their guests?
-                                <br /><br />
-                                •How do we get more local traffic?
-                                <br /><br />
-                                •What is Location-Based Services?
-                                <br /><br />
-                                •How can I send offers to women(men) only
-                                <br /><br />
-                                •Is there a way to reach my customers when they are near a competitor?
-                            </p>
+                            <ul className='geoFence-list'>
+                                <li>
+                                    Next to a Great Hotel and is there any way we can be seen by their guests?
+                                </li>
+                                <li>
+                                    How do we get more local traffic?
+                                </li>
+                                <li>What is Location-Based Services? </li>
+                                <li>How can I send offers to women(men) only </li>
+                                <li>Is there a way to reach my customers when they are near a competitor? </li>
+                            </ul>
 
                         </div>
                     </Grid>
                 </Grid>
             </section>
             {/* section 5  */}
-            <section className="padding">
+            <section className="padding marginT-mobile">
                 <Grid container spacing={5}>
                     <Grid item sm={4.5} xs={12}>
                         <div className="geoFence-sec5-leftBox">
@@ -134,30 +141,34 @@ export default function GeoFencing() {
                         <div className="geoFence-sec5-rightBox">
                             <img src={geoFenceIcon3} alt='icon' className='geoFence-icon' />
                             <div className="geoFence-heading1" style={{ margin: '25px 0px' }}>Effective mobile marketing strategies</div>
-                            <p>
-                                •Personalization- Personalization Engine
-                                <br /><br />
-                                •Exclusive Offers-Segmentation
-                                <br /><br />
-                                •Hyperlocal Targeting-Geofencing
-                                <br /><br />
-                                •Consider Time and Place-Messaging
-                                <br /><br />
-                                •QR Codes- Advertising
+                            <ul>
+                                <li>Personalization- Personalization Engine</li>
 
-                            </p>
+                                <li>Exclusive Offers-Segmentation</li>
+
+                                <li>Hyperlocal Targeting-Geofencing</li>
+
+                                <li>Consider Time and Place-Messaging</li>
+
+                                <li>QR Codes- Advertising</li>
+                            </ul>
 
                         </div>
                     </Grid>
                 </Grid>
             </section>
             {/* section 6  */}
-            <section className="padding">
+            <section className="padding marginT-mobile">
                 <Grid container spacing={5}>
+                    {isMobile && <Grid item sm={4.5} xs={12}>
+                        <div className="geoFence-sec6-rightBox">
+                            <img src={geoFenceImg4} alt="img" width='95%' />
+                        </div>
+                    </Grid>}
                     <Grid item sm={5} xs={12}>
                         <div className="geoFence-sec6-leftBox">
                             <img src={geoFenceIcon4} alt='icon' className='geoFence-icon' />
-                            <div className="geoFence-heading1" style={{ margin: '25px 0px' }}>Mobile- Reach Your Audience</div>
+                            <div className="geoFence-heading1" style={{ margin: '25px 0px' }}>Mobile-Reach Your Audience</div>
                             <p>
                                 Lorem, geofencing is a versatile tool that  enables businesses to engage with consumers in  real time based on their physical location, offering  personalized experiences and targeted marketing  messages.
                             </p>
@@ -166,15 +177,15 @@ export default function GeoFencing() {
                         </div>
                     </Grid>
                     <Grid xs={1} item />
-                    <Grid item sm={4.5} xs={12}>
+                    {!isMobile && <Grid item sm={4.5} xs={12}>
                         <div className="geoFence-sec6-rightBox">
                             <img src={geoFenceImg4} alt="img" width='95%' />
                         </div>
-                    </Grid>
+                    </Grid>}
                 </Grid>
             </section>
             {/* section 7  */}
-            <section className="padding">
+            <section className="padding ">
                 <Grid container spacing={5}>
                     <Grid item sm={6} xs={12}>
                         <div className="geoFence-sec7-leftBox">
@@ -193,45 +204,47 @@ export default function GeoFencing() {
                         </div>
                     </Grid>
                 </Grid>
-                <div className="global-heading1" style={{ marginTop: '5%' }}>Encourage adoption with <br /> unbiased geo-fenced <br /> inventory.</div>
+                <div className="marginT-mobile">
+                <div className="global-heading1 " style={{ marginTop: '5%' }}>Encourage adoption with <br className='desktop' /> unbiased geo-fenced <br className='desktop' /> inventory.</div>
+                </div>
             </section>
             <img src={geoFenceImg6} alt="img" width='100%' />
             {/* section 8  */}
-            <section className="padding">
+            <section className="padding marginT-mobile">
                 <div className="global-heading1">Geo-Conquesting</div>
-                <div className="geoFence-sec8-text">Is a cutting-edge marketing strategy that  involves targeting visitors <br /> to competitor  locations through geofencing</div>
-                <div className="geoFence-heading1" style={{ textAlign: 'center' }}>Follow the steps in Geo-Fencing</div>
-                    <div style={{padding:'0% 10%', paddingTop:'8%'}}>
-                        <Grid container spacing={5}>
-                            <Grid item sm={6} xs={12}>
-                                <div className="geoFence-sec8-dataBox">
-                                    <img src={geoFenceIcon6} alt='icon' width='66px' />
-                                    <div className="geoFence-heading1">Ask us</div>
-                                    <p>At the bottom of the form, ask about  geo-conquesting and we will send  you the information</p>
-                                </div>
-                            </Grid>
-                            <Grid item sm={6} xs={12}>
-                                <div className="geoFence-sec8-dataBox">
-                                    <img src={geoFenceIcon7} alt='icon' width='66px' />
-                                    <div className="geoFence-heading1">Choose</div>
-                                    <p>Under Creatives- choose a voucher  or game, make it enticing. Use it for  now or next time.</p>
-                                </div>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <div className='geoFence-sec8-btn'>
-                                    <div className="home-card-btnTxt" style={{ marginTop: '20px' }}>Contact us <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
-                                </div>
-                            </Grid>
+                <div className="geoFence-sec8-text">Is a cutting-edge marketing strategy that  involves targeting visitors <br className='desktop'  /> to competitor  locations through geofencing</div>
+                <div className="geoFence-heading1 marginT-mobile" style={{ textAlign: 'center' }}>Follow the steps in Geo-Fencing</div>
+                <div style={{ padding: '0% 10%', paddingTop: '8%' }}>
+                    <Grid container spacing={5}>
+                        <Grid item sm={6} xs={12}>
+                            <div className="geoFence-sec8-dataBox">
+                                <img src={geoFenceIcon6} alt='icon' width='66px' />
+                                <div className="geoFence-heading1">Ask us</div>
+                                <p>At the bottom of the form, ask about  geo-conquesting and we will send  you the information</p>
+                            </div>
                         </Grid>
-                    </div>
+                        <Grid item sm={6} xs={12}>
+                            <div className="geoFence-sec8-dataBox">
+                                <img src={geoFenceIcon7} alt='icon' width='66px' />
+                                <div className="geoFence-heading1">Choose</div>
+                                <p>Under Creatives- choose a voucher  or game, make it enticing. Use it for  now or next time.</p>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <div className='geoFence-sec8-btn'>
+                                <div className="home-card-btnTxt" style={{ marginTop: '20px' }}>Contact us <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </div>
                 <div className="home-sec7-bgBox">
-                            <div className="home-sec7-heading">Looking for more global features?</div>
-                            <div className="home-sec7-content">Check out our enterprise solution — it has everything you need to manage multi-entity travel, expenses, and procurement <br/>
-                             in real time, on one platform, around the world.</div>
-                            <Btn label="Explore our global enterprise solution" className='home-sec7-btn' />
-                        </div>
+                    <div className="home-sec7-heading">Looking for more global features?</div>
+                    <div className="home-sec7-content">Check out our enterprise solution — it has everything you need to manage multi-entity travel, expenses, and procurement <br />
+                        in real time, on one platform, around the world.</div>
+                    <Btn label="Explore our global enterprise solution" className='home-sec7-btn' />
+                </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }

@@ -40,6 +40,16 @@
 .mt-8per{
     margin-top: 8%;
 }
+
+ul{
+    font-family: Poppins-Regular;
+    margin-left: 10px;
+    color: black;
+}
+
+ul li{
+    margin-bottom: 10px;
+}
 /* 
 img {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -63,7 +73,11 @@ img:hover {
         font-size: 14px;
     }
 
-    br{
+    br.desktop{
         display: none;
+    }
+
+    .marginT-mobile{
+        margin-top: 50px;
     }
 }
