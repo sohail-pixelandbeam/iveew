@@ -135,7 +135,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon13,
             active: active13,
             label: 'Chatbot AI',
-            to:'/'
+            to:'/AIBot'
         },
         {
             icon: icon14,

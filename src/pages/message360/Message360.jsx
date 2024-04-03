@@ -23,7 +23,7 @@ export default function Message360() {
             <NavBar hideModal={true} />
             {/* section 1  */}
             <section className='message360-hero'>
-                <div className="message360-hero-contentBox">
+                <div className="geoFence-hero-contentBox">
                     <div className="message360-hero-heading">Message <br /> 360</div>
                     <div className="message360-hero-content">The value of adding messaging to your business lies in improved communication, customer engagement, and revenue generation. Messaging apps offer a convenient and efficient way to interact with customers, leading to increased customer loyalty and satisfaction. Recently study reflects 75% SMS adoption.</div>
                     <div className="geoFence-hero-btns">

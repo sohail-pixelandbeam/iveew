@@ -27,10 +27,10 @@ export default function SpecialityMessaging() {
           <Grid container spacing={5}>
             <Grid item sm={6} xs={12}>
               <div className="spMsg-hero-contentBox">
-                <div className="spMsg-hero-heading ">The <br className='desktop'/> speciality <br className='desktop' /> of  messaging</div>
+                <div className="spMsg-hero-heading ">The speciality of  messaging</div>
                 <div className="spMsg-hero-btns">
                   <Btn label='Get Started' />
-                  <Btn label="Open an account" className='geoFence-hero-btn' style={{ padding: '0px 45px' }} />
+                  <Btn label="Open an account" className='geoFence-hero-btn' style={{ padding: '0px 25px' }} />
                 </div>
               </div>
             </Grid>

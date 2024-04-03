@@ -9,6 +9,7 @@ import ReputationManagement from '../pages/reputationManagement/ReputationManage
 import BookingEngineScript from '../pages/bookingEngineScript/BookingEngineScript';
 import MessageMarketSegmentation from '../pages/messageMarketSegmentaion/MessageMarketSegmentation';
 import MobileMarketStrategies from '../pages/mobileMarketStrategies/MobileMarketStrategies';
+import AIBot from '../pages/aiBot/AIBot';
 
 
 
@@ -29,6 +30,7 @@ export default function AppRouter() {
                     <Route path='/BookingEngineScript' element={<BookingEngineScript/>}></Route>
                     <Route path='/MessageMarketSegmentation' element={<MessageMarketSegmentation/>}></Route>
                     <Route path='/MobileMarketStrategies' element={<MobileMarketStrategies/>}></Route>
+                    <Route path='/AIBot' element={<AIBot/>}></Route>
                 </Routes>
             </BrowserRouter>
         </>
