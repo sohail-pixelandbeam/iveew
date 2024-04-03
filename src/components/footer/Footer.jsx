@@ -41,7 +41,7 @@ export default function Footer() {
                         <div className="f-link"  onClick={()=>handleNavigate('/')}>Live Budgets</div>
                     </Grid>
                     <Grid item sm={2.25} xs={6} >
-                        <div className="f-linkBold">Pricing</div>
+                        <div className="f-linkBold" onClick={()=>handleNavigate('/Pricing')}>Pricing</div>
                         <div className="f-link"  onClick={()=>handleNavigate('/')}>About iVeew</div>
                         <div className="f-link"  onClick={()=>handleNavigate('/')}>Careers</div>
                         <div className="f-link"  onClick={()=>handleNavigate('/')} >Contact</div>
