@@ -8,6 +8,7 @@ import GuestRecognition from '../pages/guestRecognition/GuestRecognition';
 import ReputationManagement from '../pages/reputationManagement/ReputationManagement';
 import BookingEngineScript from '../pages/bookingEngineScript/BookingEngineScript';
 import MessageMarketSegmentation from '../pages/messageMarketSegmentaion/MessageMarketSegmentation';
+import MobileMarketStrategies from '../pages/mobileMarketStrategies/MobileMarketStrategies';
 
 
 
@@ -27,6 +28,7 @@ export default function AppRouter() {
                     <Route path='/ReputationManagement' element={<ReputationManagement/>}></Route>
                     <Route path='/BookingEngineScript' element={<BookingEngineScript/>}></Route>
                     <Route path='/MessageMarketSegmentation' element={<MessageMarketSegmentation/>}></Route>
+                    <Route path='/MobileMarketStrategies' element={<MobileMarketStrategies/>}></Route>
                 </Routes>
             </BrowserRouter>
         </>

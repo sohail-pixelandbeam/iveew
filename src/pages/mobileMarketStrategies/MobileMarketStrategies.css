@@ -1,0 +1,9 @@
+.mblMarket-hero{
+    background-image: url('../../assets/imgs/mblMarketImg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 700px;
+    padding:10% 0%;
+}

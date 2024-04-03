@@ -41,6 +41,10 @@
     margin-top: 8%;
 }
 
+.marginT-desktop{
+    margin-top: 100px;
+}
+
 ul{
     font-family: Poppins-Regular;
     margin-left: 10px;
@@ -79,5 +83,9 @@ img:hover {
 
     .marginT-mobile{
         margin-top: 50px;
+    }
+
+    .marginT-desktop{
+        margin-top: 0px;
     }
 }

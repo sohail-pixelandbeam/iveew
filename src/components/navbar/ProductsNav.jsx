@@ -114,7 +114,7 @@ export default function ProductsNav({ showNote, setActiveLink }) {
             icon: icon19,
             active: active19,
             label: 'Mobile Market Strategies',
-            to:'/'
+            to:'/MobileMarketStrategies'
         },
     ]
 
