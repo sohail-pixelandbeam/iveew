@@ -86,7 +86,7 @@ export default function GeoFencing() {
                             <InputField placeholder='Email (Company Only)' />
                             <div className="geoFence-sec3-inpBtn">
                                 <InputField placeholder='Business' />
-                                <Btn label='Send' style={{ backgroundColor: 'black', height: isMobile?'auto':'57px' }} />
+                                <Btn label='Send' style={{ backgroundColor: 'black', height: isMobile ? 'auto' : '57px' }} />
                             </div>
                         </div>
                     </Grid>
@@ -131,12 +131,11 @@ export default function GeoFencing() {
             {/* section 5  */}
             <section className="padding marginT-mobile">
                 <Grid container spacing={5}>
-                    <Grid item sm={4.5} xs={12}>
+                    {isMobile && <Grid item sm={4.5} xs={12}>
                         <div className="geoFence-sec5-leftBox">
                             <img src={geoFenceImg4} alt="img" width='95%' />
                         </div>
-                    </Grid>
-                    <Grid item xs={1.5} />
+                    </Grid>}
                     <Grid item sm={6} xs={12}>
                         <div className="geoFence-sec5-rightBox">
                             <img src={geoFenceIcon3} alt='icon' className='geoFence-icon' />
@@ -155,16 +154,22 @@ export default function GeoFencing() {
 
                         </div>
                     </Grid>
+                    {!isMobile && <Grid item sm={4.5} xs={12}>
+                        <div className="geoFence-sec5-leftBox">
+                            <img src={geoFenceImg4} alt="img" width='95%' />
+                        </div>
+                    </Grid>}
                 </Grid>
             </section>
             {/* section 6  */}
             <section className="padding marginT-mobile">
                 <Grid container spacing={5}>
-                    {isMobile && <Grid item sm={4.5} xs={12}>
+                  <Grid item sm={4.5} xs={12}>
                         <div className="geoFence-sec6-rightBox">
                             <img src={geoFenceImg4} alt="img" width='95%' />
                         </div>
-                    </Grid>}
+                    </Grid>
+                    <Grid xs={1} item />
                     <Grid item sm={5} xs={12}>
                         <div className="geoFence-sec6-leftBox">
                             <img src={geoFenceIcon4} alt='icon' className='geoFence-icon' />
@@ -176,23 +181,17 @@ export default function GeoFencing() {
 
                         </div>
                     </Grid>
-                    <Grid xs={1} item />
-                    {!isMobile && <Grid item sm={4.5} xs={12}>
-                        <div className="geoFence-sec6-rightBox">
-                            <img src={geoFenceImg4} alt="img" width='95%' />
-                        </div>
-                    </Grid>}
                 </Grid>
             </section>
             {/* section 7  */}
             <section className="padding ">
                 <Grid container spacing={5}>
-                    <Grid item sm={6} xs={12}>
+                    {isMobile && <Grid item sm={6} xs={12}>
                         <div className="geoFence-sec7-leftBox">
                             <img src={geoFenceImg5} alt="img" width='90%' />
                         </div>
-                    </Grid>
-                    <Grid item sm={6} xs={12}>
+                    </Grid>}
+                    <Grid item sm={5} xs={12}>
                         <div className="geoFence-sec7-rightBox">
                             <img src={geoFenceIcon5} alt='icon' className='geoFence-icon' />
                             <div className="geoFence-heading1" style={{ margin: '25px 0px' }}>Select your Creatives</div>
@@ -203,16 +202,22 @@ export default function GeoFencing() {
 
                         </div>
                     </Grid>
+                    {!isMobile &&  <Grid item sm={1}/>}
+                    {!isMobile && <Grid item sm={6} xs={12}>
+                        <div className="geoFence-sec7-leftBox">
+                            <img src={geoFenceImg5} alt="img" width='90%' />
+                        </div>
+                    </Grid>}
                 </Grid>
                 <div className="marginT-mobile">
-                <div className="global-heading1 " style={{ marginTop: '5%' }}>Encourage adoption with <br className='desktop' /> unbiased geo-fenced <br className='desktop' /> inventory.</div>
+                    <div className="global-heading1 " style={{ marginTop: '5%' }}>Encourage adoption with <br className='desktop' /> unbiased geo-fenced <br className='desktop' /> inventory.</div>
                 </div>
             </section>
             <img src={geoFenceImg6} alt="img" width='100%' />
             {/* section 8  */}
             <section className="padding marginT-mobile">
                 <div className="global-heading1">Geo-Conquesting</div>
-                <div className="geoFence-sec8-text">Is a cutting-edge marketing strategy that  involves targeting visitors <br className='desktop'  /> to competitor  locations through geofencing</div>
+                <div className="geoFence-sec8-text">Is a cutting-edge marketing strategy that  involves targeting visitors <br className='desktop' /> to competitor  locations through geofencing</div>
                 <div className="geoFence-heading1 marginT-mobile" style={{ textAlign: 'center' }}>Follow the steps in Geo-Fencing</div>
                 <div style={{ padding: '0% 10%', paddingTop: '8%' }}>
                     <Grid container spacing={5}>
