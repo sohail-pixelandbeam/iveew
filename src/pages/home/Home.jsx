@@ -152,76 +152,6 @@ export default function Home() {
         
                 <SliderCustom2/>
                
-                {/* section 5  */}
-                <section className="home-sec5-box padding">
-                    <div className="global-heading1">Give your resources team <br /> superpowers</div>
-                    <div className="global-text1 home-sec2-content">Maximize every resource with AI-powered controls, payments, and accounting.</div>
-                    <div className="sec5-cards-box">
-                        <CardLeft
-                            img={img9}
-                            heading="RFID software revolutionizes "
-                            content="Set budgets and allocate spend limits with auto-enforced 
-                    controls that empower employees to spend wisely. Track and 
-                    adjust in real time to keep everyone on budget and maximize 
-                    impact."
-                        />
-                        <CardRight
-                            img={img10}
-                            heading="QRMAJI Delivers codes"
-                            content="Make expenses a breeze for employees and managers with automated receipts, an AI-powered expense assistant, in-app travel bookings and itinerary changes. All in a five-star mobile app."
-                        />
-                        <CardLeft
-                            img={img11}
-                            heading="Beacons, wifi, mesh, 5.0"
-                            content="Set budgets and allocate spend limits with auto-enforced 
-                    controls that empower employees to spend wisely. Track and 
-                    adjust in real time to keep everyone on budget and maximize 
-                    impact."
-                        />
-                        <CardRight
-                            img={img12}
-                            heading="Geofencing your property"
-                            content="Make expenses a breeze for employees and managers with automated receipts, an AI-powered expense assistant, in-app travel bookings and itinerary changes. All in a five-star mobile app."
-                        />
-                        <CardLeft
-                            img={img13}
-                            heading="GX-Guest management"
-                            content="Set budgets and allocate spend limits with auto-enforced controls that empower employees to spend wisely. Track and adjust in real time to keep everyone on budget and maximize impact."
-                        />
-                        <CardRight
-                            img={img14}
-                            heading="Segmentation marketing"
-                            content="Make expenses a breeze for employees and managers with automated receipts, an AI-powered expense assistant, in-app travel bookings and itinerary changes. All in a five-star mobile app."
-                        />
-                    </div>
-                    <div className='sec5-author-text-box'>
-                        <Grid container spacing={5} >
-                            <Grid item sm={5} xs={12} >
-                                <img src={img15} alt="img" className='home-sec5-author-img'/>
-                            </Grid>
-                            <Grid item sm={6} xs={12} >
-                                <img src={img16} alt="img" width='250px' />
-                                <div className="home-sec5-author-text">
-                                    “iVeeW has been a major gain for us in efficiency for T&E. It’s easy for employees to understand where and how to spend.”
-                                </div>
-                                <div className="home-sec5-author-name">— Mike Kim, Vice President of Finance, DoorDash</div>
-                                <div className="home-card-btnTxt">Read the case study <EastIcon fontSize='small' sx={{ color: '#F56B3F' }} /></div>
-                            </Grid>
-                        </Grid>
-                    </div>
-                </section>
-                {/* section 6  */}
-                <section className="home-sec6-box">
-                    <div className="padding">
-                        <Grid container>
-                            <Grid item sm={5} xs={12}>
-                                <div className="home-sec6-heading">The AI Powered tools  to connect customers  and <br /> guests</div>
-                                <div className="home-sec6-content">Learn how our spend platform can increase teh strategic impact of your finance team and future-proof your company.</div>
-                                <Btn label='Get Started' />
-                            </Grid>
-                        </Grid>
-                    </div>
-                </section>
                 {/* section 7  */}
                 <section>
                     <div className="home-sec7-box padding">
@@ -246,15 +176,8 @@ export default function Home() {
                                 }
                             </Grid>
                         </div>
-                        <div className="home-sec7-bgBox">
-                            <div className="home-sec7-heading">Looking for more global features?</div>
-                            <div className="home-sec7-content">Check out our enterprise solution — it has everything you need to manage multi-entity travel, expenses, and procurement <br />
-                                in real time, on one platform, around the world.</div>
-                            <Btn label="Explore our global enterprise solution" className='home-sec7-btn' />
-                        </div>
                     </div>
                 </section>
-                {/* section 8  */}
                 {/* section 8  */}
                 <SliderCustom/>
                 {/* Footer  */}
