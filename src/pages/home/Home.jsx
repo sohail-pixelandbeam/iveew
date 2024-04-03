@@ -25,36 +25,36 @@ import "slick-carousel/slick/slick-theme.css";
 import SliderCustom2 from '../../components/sliderCustom2/SliderCustom2';
 import FullScreenVideo from '../../components/fullScreenVideo/FullScreenVideo';
 import SliderCustom from '../../components/sliderCustom/SliderCustom'
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
     let [hideModal, setHideModal] = useState(true);
-   
+    const navigate = useNavigate()
     const pricingData = [
         {
-            heading: "Essentials",
-            explanation: "For startups and growing companies",
-            price: "$0 user/month",
-            btnLabel: "Open an account - for free",
-            features: ['Global corporate cards', 'Business account and bill pay', '$6M FDIC coverage adn 4.90% yield', 'Integrated expense management', 'Brex AI expense assistant', 'Real-time spend reporting', 'Accounting integrations', '24/7 support'],
+            heading: "SMB-Essentials",
+            explanation: "Per Location",
+            price: "$350/month per location",
+            btnLabel: "Set-up account to get started",
+            features: ['Messaging','Market Segmentation', 'Personalization', 'Reputation Management','Booking/Purchase Confirmation', 'Chatbot AI', 'QR Platform (20 Codes)'],
+            specialNote:'Select 4'
         },
         {
-            heading: "Premium",
-            explanation: "For mid-sized companies looking to scale",
-            price: "$12 user/month",
+            heading: "SME-Premium",
+            explanation: "Per Location",
+            price: "$450/month per location",
             btnLabel: "Contact sales",
-            features: ['Custom expense policies and approvals', 'In-app travel booking adn management', 'Live Budgets with real-time tracking', 'Custom procurement workflows', 'Custom, automated HRIS and advanced accounting integration', 'Dedicated support for admins'],
-            specialNote: 'Everything in Essentials plus:',
+            features: ['Customer Recognition', 'Blast-M','Message-360','Loyality Integration', 'Geofencing', 'Voucher & Gift Cards'],
+            specialNote: 'Select 4',
         },
         {
             heading: "Enterprise",
-            explanation: "For global enterprises with custom needs",
-            price: "Custom Pricing",
+            explanation: "Per Location",
+            price: "$700/month per location",
             btnLabel: "Contact sales",
-            features: ['Local cards and billing in 50+ countries', 'Locally funded payments in 40+ countries', 'Unlimited policy customization', 'Advanced roles and permissions', 'Custom companies and audit reports', 'Top-tier onboarding and support'],
-            specialNote: 'Everything in Premium plus:',
+            features: ['Inspirations','Asset Tracking','RFID (100 tags)','QR Platform (100 Codes)'],
+            specialNote: 'All Platforms',
         },
-
-
     ]
  
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -233,6 +233,7 @@ export default function Home() {
                                         <Grid item md={4} sm={6} xs={12}
                                             key={item.heading}>
                                             <PricingCard
+                                                onClick={()=>navigate('/Pricing')}
                                                 heading={item.heading}
                                                 features={item.features}
                                                 btnLabel={item.btnLabel}

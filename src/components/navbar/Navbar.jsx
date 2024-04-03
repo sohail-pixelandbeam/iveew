@@ -105,7 +105,10 @@ export default function NavBar({ active, hideModal }) {
                         <div
                             className="link-nb"
                             onMouseEnter={() => onCursorEnter('Pricing')}
-                            onClick={() => onCursorEnter('Pricing')}
+                            onClick={() => {
+                                onCursorEnter('Pricing');
+                                navigate('/Pricing');
+                            }}
                         >Pricing
                             {/* {activeLink === 'Pricing' ? <KeyboardArrowUpIcon fontSize="small" sx={{ color: '#F56B3F' }} /> : <KeyboardArrowDownIcon fontSize="small" />} */}
                         </div>
